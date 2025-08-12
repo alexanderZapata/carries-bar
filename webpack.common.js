@@ -2,7 +2,9 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: './js/app.js',
+    // The source files live under src/public; point the entry there so the
+    // production build can locate the application script during CI builds.
+    app: './src/public/js/app.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

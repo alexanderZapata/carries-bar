@@ -13,11 +13,8 @@ pages:
     - npm run build
     - mkdir -p public/${SUBFOLDER}
     - cp -r dist/* public/${SUBFOLDER}/
-    - if [ -d audio ]; then cp -r audio public/${SUBFOLDER}/; fi
-    - cp robots.txt public/${SUBFOLDER}/
-    - cp sitemap.xml public/${SUBFOLDER}/
-    - cp favicon.ico public/${SUBFOLDER}/
-    - cp site.webmanifest public/${SUBFOLDER}/
+    # Copy over optional audio assets if they exist in the source directory
+    - if [ -d src/public/audio ]; then cp -r src/public/audio public/${SUBFOLDER}/; fi
   artifacts:
     paths:
       - public
