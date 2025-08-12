@@ -14,10 +14,6 @@ nav {
   margin-bottom: 1rem;
 }
 
-.tester {
-  display: grid!important;
-  grid-auto-flow: column;
-}
 
 /*!* Base wrapper *!*/
 .nav-menu {
