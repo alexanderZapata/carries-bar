@@ -64,12 +64,15 @@ h1 {
 }
 
 .chip {
-  display: inline-block;
+  display:  flex;
+  justify-self: center;
+  justify-content: center;
   background: color-mix(in oklab, var(--chip) 92%, black 8%);
   color: var(--ink);
   padding: 1rem 2rem;
   border-radius: 999px;
   height:-webkit-fill-available;
+  max-height: 4rem;
   font-size: var(--fs-sp);
   border: 1px solid color-mix(in oklab, var(--chip) 75%, white 25%);
   cursor: pointer;
