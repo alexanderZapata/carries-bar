@@ -6,7 +6,7 @@
   width: 100%;
   min-width: var(--minimum-width-size);
   min-height: 14vh;
-  max-height: 14.25vh;
+  max-height: 22vh;
   /*transition: all .75s ease-in-out;*/
   margin-top: 4rem;
   align-items: center;
@@ -33,7 +33,7 @@
   /*text-effect: emboss;*/
   font-size: var(--fs-h1);
   font-weight: var(--fw-regular);
-  letter-spacing: .2em;
+  letter-spacing: .1rem;
   height: 100%;
   align-content: center;
   margin: 0;

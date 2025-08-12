@@ -71,6 +71,7 @@ body {
   text-align: center;
   line-height: 1.6;
   position: relative;
+  padding: .15rem;
 }
 
 img {

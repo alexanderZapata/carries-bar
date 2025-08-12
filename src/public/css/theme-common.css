@@ -28,7 +28,6 @@
 }
 
 
-
 .hero .panel {
   background: var(--panel);
   border-radius: var(--radius);
@@ -41,53 +40,94 @@ h1 {
   margin: .25em 0 .4em
 }
 
-.info {
+.weekly-look-nav-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
   gap: 10px;
   margin-bottom: 12px
 }
 
 
 /* --- Shared components used in index.html --- */
-.badge{
-  display:inline-flex; align-items:center;
-  background: var(--accent-2); color:#2b1b00;
-  border-radius:999px; padding:6px 10px; font-weight:800;
+.badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-2);
+  color: #2b1b00;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 800;
 }
 
-.chip{
-  display:inline-block;
+.chip {
+  display: inline-block;
   background: color-mix(in oklab, var(--chip) 92%, black 8%);
   color: var(--ink);
-  padding:6px 10px; border-radius:999px; font-size:var(--fs-sp);
-  border:1px solid color-mix(in oklab, var(--chip) 75%, white 25%);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: var(--fs-sp);
+  border: 1px solid color-mix(in oklab, var(--chip) 75%, white 25%);
+  cursor: pointer;
 }
 
-.pill{
-  display:inline-flex; align-items:center; gap:8px;
-  background:var(--chip);
-  border:1px solid color-mix(in oklab, var(--chip) 65%, white 35%);
-  border-radius:999px;
-  padding:8px 12px;
-  font-size:var(--fs-sp);
-  color:var(--muted);
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--chip);
+  border: 1px solid color-mix(in oklab, var(--chip) 65%, white 35%);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: var(--fs-sp);
+  color: var(--muted);
 }
 
-.cta{
-  display:inline-flex; align-items:center; gap:10px;
-  background:var(--accent); color:#fff;
-  border:none; border-radius:12px;
-  padding:12px 16px; font-weight:700; text-decoration:none;
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 700;
+  text-decoration: none;
 }
-.cta.sec{ background:var(--blue); color:#fff }
 
-.weekbar{ display:grid; grid-template-columns:repeat(7,1fr); gap:10px }
-.day{
+.cta.sec {
+  background: var(--blue);
+  color: #fff
+}
+
+.weekbar {
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap: 10px
+}
+
+.day {
   background: var(--day-card);
-  border:1px solid var(--day-border);
-  border-radius:12px; padding:12px;
+  border: 1px solid var(--day-border);
+  border-radius: 12px;
+  padding: 12px;
 }
-.day strong{ display:block }
-.queue{ display:grid; gap:10px }
-.queue .row{ display:flex; gap:12px; align-items:center }
+
+.day strong {
+  display: block
+}
+
+.queue {
+  display: grid;
+  gap: 10px
+}
+
+.queue .row {
+  display: flex;
+  gap: 12px;
+  align-items: center
+}

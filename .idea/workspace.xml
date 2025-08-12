@@ -8,6 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/hero.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/logo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/root.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/theme-common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/theme-common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/index.html" afterDir="false" />
     </list>
@@ -88,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1754967835269</updated>
       <workItem from="1754967837343" duration="9139000" />
-      <workItem from="1754992974604" duration="19985000" />
+      <workItem from="1754992974604" duration="22074000" />
     </task>
     <servers />
   </component>
