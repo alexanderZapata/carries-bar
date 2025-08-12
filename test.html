@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrie’s Bar — Three Additional Mockups</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Anton:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* Brand palette */
+      --navy:#0C1A2B;      /* page bg */
+      --card:#0F2237;      /* deep panel */
+      --panel:#0F1E2E;     /* subtle alt */
+      --ink:#EBF4FF;       /* primary text */
+      --muted:#B7C6D9;     /* secondary text */
+
+      --accent:#E33D4E;    /* red CTA */
+      --accent-2:#F0C53A;  /* value yellow */
+      --ok:#20C997;        /* green */
+      --blue:#3B82F6;      /* action */
+      --chip:#11263D;      /* chip background */
+
+      --radius:18px;
+      --shadow:0 10px 24px rgba(0,0,0,.35);
+
+      /* Type scale */
+      --fs-sp: clamp(.75rem, .6rem + 1.2vw, .95rem);
+      --fs-p:  clamp(1rem, .85rem + .6vw, 1.125rem);
+      --fs-h6: clamp(1.1rem, .95rem + .7vw, 1.3rem);
+      --fs-h5: clamp(1.3rem, 1.1rem + .9vw, 1.6rem);
+      --fs-h4: clamp(1.6rem, 1.2rem + 1.3vw, 2rem);
+      --fs-h3: clamp(2rem, 1.4rem + 2vw, 2.6rem);
+      --fs-h2: clamp(2.6rem, 1.8rem + 2.4vw, 3.2rem);
+      --fs-h1: clamp(3rem, 2.2rem + 3vw, 3.8rem);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--navy);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    a{color:inherit}
+    .nav{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,#0a1726,#0c1a2b 80%);border-bottom:1px solid #12263C}
+    .nav .row{max-width:1200px;margin:auto;display:flex;align-items:center;gap:20px;padding:14px 20px}
+    .brand{font-weight:800;letter-spacing:.04em}
+    .menu{margin-left:auto;display:flex;gap:16px;color:var(--muted);font-size:var(--fs-sp)}
+    .menu a{padding:8px 10px;border-radius:10px}
+    .menu a:hover{background:#12263C}
+
+    /* Utilities */
+    .container{max-width:1200px;margin:auto;padding:18px}
+    .grid{display:grid;gap:18px}
+    .cards{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:var(--chip);border:1px solid #1A3857;border-radius:999px;padding:8px 12px;font-size:var(--fs-sp);color:var(--muted)}
+    .cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:white;border:none;border-radius:12px;padding:12px 16px;font-weight:700;text-decoration:none}
+    .cta.sec{background:var(--blue)}
+    .chip{display:inline-block;background:#162C45;color:var(--ink);padding:6px 10px;border-radius:999px;font-size:var(--fs-sp);border:1px solid #25476A}
+    .quiet{color:var(--muted)}
+    .badge{display:inline-flex;align-items:center;background:var(--accent-2);color:#2b1b00;border-radius:999px;padding:6px 10px;font-weight:800}
+    .btn-row{display:flex;flex-wrap:wrap;gap:10px}
+    .thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .ph{background:linear-gradient(180deg,#1a3250,#152a45);border:1px solid #2a4b72;border-radius:14px;min-height:110px;display:grid;place-items:center;color:#8fb3d9}
+    .ph.tall{min-height:200px}
+
+    /* ===== Mockup switcher (for preview) ===== */
+    .switch{position:fixed;right:14px;bottom:14px;z-index:30;background:#0b1a2b;border:1px solid #123456;border-radius:14px;padding:8px 10px;color:#9ab1c8}
+    .switch button{all:unset;background:#123456;color:#dbe7f5;border-radius:10px;padding:6px 10px;margin-left:6px;cursor:pointer}
+
+    /* Shared components used across pages */
+    .weekbar{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+    .day{background:#0f243b;border:1px solid #16324f;border-radius:12px;padding:12px}
+    .day strong{display:block}
+    .queue{display:grid;gap:10px}
+    .queue .row{display:flex;gap:12px;align-items:center}
+
+    /* RESPONSIVE */
+    @media (max-width:900px){.cards{grid-template-columns:repeat(6,1fr)}.thumbs{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:640px){.cards{grid-template-columns:repeat(4,1fr)}.thumbs{grid-template-columns:repeat(2,1fr)}.weekbar{grid-template-columns:repeat(3,1fr)}.menu{display:none}}
+
+    /* -------------------------------------------------------------
+       MOCKUP D — “Queue‑First Live Mode”  (hero tonight + live karaoke)
+       ------------------------------------------------------------- */
+    #mockup-d .hero{display:grid;grid-template-columns:2fr 1.1fr;gap:18px}
+    #mockup-d .hero .panel{background:var(--panel);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    #mockup-d h1{font-size:var(--fs-h1);margin:.25em 0 .4em}
+    #mockup-d .info{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+
+    /* -------------------------------------------------------------
+       MOCKUP E — “Poster Marquee” (big TONIGHT neon, tiles below)
+       ------------------------------------------------------------- */
+    #mockup-e .poster{background:linear-gradient(180deg,#121e2d 0%, #0c1a2b 100%);padding:32px;border-radius:20px;box-shadow:var(--shadow);text-align:center}
+    #mockup-e .poster h1{font-family:Anton,Inter,system-ui;letter-spacing:.04em;font-size:clamp(3rem,2.2rem + 3vw,5rem);margin:.2em 0}
+    #mockup-e .tiles{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
+    #mockup-e .tile{background:var(--card);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+    #mockup-e .tile.big{grid-column:1/2;min-height:280px}
+
+    /* -------------------------------------------------------------
+       MOCKUP F — “Local Guide” (patio/longest bar hero + sticky tonight)
+       ------------------------------------------------------------- */
+    #mockup-f .top{display:grid;grid-template-columns:1.6fr .9fr;gap:18px}
+    #mockup-f .sticky{position:sticky;top:86px;align-self:start}
+    #mockup-f .guide{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    #mockup-f .guide .card{grid-column:span 6}
+    @media (max-width:900px){#mockup-f .top{grid-template-columns:1fr}#mockup-f .guide .card{grid-column:span 12}}
+
+  </style>
+  <!-- THEME INJECT START -->
+  <style>
+    /* ===== Theme Switcher UI ===== */
+    .themebar{
+      position:fixed; left:14px; bottom:14px; z-index:40;
+      background: rgba(0,0,0,.6); backdrop-filter: blur(6px);
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:14px; padding:8px 10px; color:#dbe7f5; font: 500 13px/1.2 Inter,system-ui,sans-serif;
+    }
+    .themebar button{
+      all:unset; cursor:pointer; background: rgba(255,255,255,.1);
+      padding:6px 10px; border-radius:10px; margin-left:6px; white-space:nowrap;
+    }
+    .themebar .row{ display:flex; align-items:center; gap:6px; margin:4px 0; }
+    .themebar strong{ font-weight:700; opacity:.85 }
+
+    /* Make the original view switch match theme too */
+    .switch{ background: var(--panel, #0b1a2b); border:1px solid var(--border, #123456); color:var(--muted, #9ab1c8); }
+    .switch button{ background: var(--chip, #123456); color: var(--ink, #dbe7f5); }
+
+    /* Override nav to follow theme */
+    .nav{ background: var(--nav-bg, var(--navy)); border-bottom:1px solid var(--border, #123456); }
+
+    /* Components that had fixed colors -> theme-aware */
+    .day{ background: var(--day-card, #0f243b); border:1px solid var(--day-border, #16324f); }
+    .ph{ background: var(--ph-bg, linear-gradient(180deg,#1a3250,#152a45)); border:1px solid var(--ph-border, #2a4b72); color: var(--ph-fg, #8fb3d9); }
+    .ph.tall{ min-height:200px }
+
+    /* ============== THEME SETS (2 sets × day/night) ============== */
+    /* We map to the variables already used in the mockup:
+       --navy (page bg), --card (surface), --panel (alt surface), --ink, --muted,
+       --accent (primary button), --blue (secondary button), --accent-2 (badge),
+       --ok (success), --chip (chips) plus new helpers: --border, --nav-bg,
+       --day-card, --day-border, --ph-bg, --ph-border, --ph-fg
+    */
+
+    /* ---------- THEME 1: NEON MARTINI ---------- */
+    body[data-set="neon"][data-mode="night"]{
+      --navy: #0B0F14;
+      --card: #0F1A26;
+      --panel:#142132;
+      --ink:  #F5FAFF;
+      --muted:#9EB3C7;
+
+      --accent:#21B7FF;     /* primary CTA (blue glow) */
+      --blue:  #FF4FA3;     /* secondary CTA (pink glow) */
+      --accent-2:#F2C72A;   /* badges */
+      --ok:    #43E57A;
+      --chip:  #0F243B;
+
+      --border:#1E2A3A;
+      --nav-bg: linear-gradient(180deg, #0B0F14, #0C1A2B 80%);
+      --day-card:#0F243B;
+      --day-border:#16324F;
+      --ph-bg: linear-gradient(180deg,#1a3250,#152a45);
+      --ph-border:#2a4b72;
+      --ph-fg:#8fb3d9;
+    }
+
+    body[data-set="neon"][data-mode="day"]{
+      --navy: #F7FBFF;
+      --card: #FFFFFF;
+      --panel:#F1F6FA;
+      --ink:  #0C141D;
+      --muted:#556575;
+
+      --accent:#007EB8;     /* primary CTA (blue) */
+      --blue:  #C61F6A;     /* secondary CTA (magenta) */
+      --accent-2:#B68E00;   /* badges */
+      --ok:    #1A9E62;
+      --chip:  #E6EEF7;
+
+      --border:#DBE5F0;
+      --nav-bg: #FFFFFF;
+      --day-card:#EAF2FA;
+      --day-border:#D0D9E4;
+      --ph-bg: linear-gradient(180deg,#F0F5FB,#E6EEF7);
+      --ph-border:#D3DEEA;
+      --ph-fg:#4C6075;
+    }
+
+    /* ---------- THEME 2: SIGNBOARD HERITAGE ---------- */
+    body[data-set="sign"][data-mode="night"]{
+      --navy: #121417;
+      --card: #1B1F24;
+      --panel:#22272E;
+      --ink:  #E7EBF0;
+      --muted:#A5AFBA;
+
+      --accent:#7C2E2A;     /* roof-rust for primary CTA (white text on dark) */
+      --blue:  #6BA7FF;     /* secondary CTA */
+      --accent-2:#F2C72A;   /* sign gold for badges */
+      --ok:    #44B36A;
+      --chip:  #212832;
+
+      --border:#2C333B;
+      --nav-bg: #1B1F24;
+      --day-card:#202731;
+      --day-border:#2A313B;
+      --ph-bg: linear-gradient(180deg,#24303B,#1F2A34);
+      --ph-border:#323C46;
+      --ph-fg:#9EB0BF;
+    }
+
+    body[data-set="sign"][data-mode="day"]{
+      --navy: #FAF9F6;
+      --card: #FFFFFF;
+      --panel:#F2F4F6;
+      --ink:  #111317;
+      --muted:#596271;
+
+      --accent:#8F3932;     /* deep rust */
+      --blue:  #295EA6;     /* sky tint */
+      --accent-2:#F2C72A;   /* sign gold */
+      --ok:    #3AAE6F;
+      --chip:  #EEF1F3;
+
+      --border:#E3E5E8;
+      --nav-bg: #FFFFFF;
+      --day-card:#EEF1F3;
+      --day-border:#D9DDE2;
+      --ph-bg: linear-gradient(180deg,#F6F7F8,#EEF1F3);
+      --ph-border:#DADFE4;
+      --ph-fg:#475362;
+    }
+  </style>
+  <!-- THEME INJECT END -->
+
+</head>
+<body>
+<nav class="nav">
+  <div class="row">
+    <div class="brand">Carrie’s Bar</div>
+    <div class="menu">
+      <a href="#">Menu</a>
+      <a href="#">Calendar</a>
+      <a href="#">Karaoke</a>
+      <a href="#">Specials</a>
+      <a href="#">Book a Band</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================= -->
+<!-- MOCKUP D — Queue‑First Live Mode -->
+<!-- ============================= -->
+<main id="mockup-d" class="container">
+  <section class="hero">
+    <div class="panel">
+      <span class="badge">No Cover</span>
+      <h1>Tonight @ Carrie’s</h1>
+      <div class="info">
+        <span class="chip">Artist • 9:00 PM</span>
+        <span class="chip">$3 Wells</span>
+        <span class="chip">Add to Calendar →</span>
+      </div>
+      <div class="weekbar" aria-label="This week at a glance">
+        <div class="day">
+          <strong>Thu</strong>
+          <div class="quiet">Artist</div>
+          <div class="quiet">9:00 PM</div>
+          <div class="quiet">No Cover</div>
+        </div>
+        <div class="day"><strong>Fri</strong><div class="quiet">Artist</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
+        <div class="day"><strong>Sat</strong><div class="quiet">Artist</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
+        <div class="day"><strong>Sun</strong><div class="quiet">Acoustic</div><div class="quiet">8:00 PM</div><div class="quiet">No Cover</div></div>
+        <div class="day"><strong>Mon</strong><div class="quiet">Open Mic</div><div class="quiet">8:30 PM</div><div class="quiet">No Cover</div></div>
+        <div class="day"><strong>Tue</strong><div class="quiet">Karaoke</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
+        <div class="day"><strong>Wed</strong><div class="quiet">Blues Jam</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
+      </div>
+    </div>
+
+    <div class="panel queue">
+      <h2 style="margin:0 0 6px;font-size:var(--fs-h3)">Karaoke Queue</h2>
+      <div class="row quiet"><span class="pill">Open</span><span class="pill">In line: 12</span><span class="pill">Est. wait: 38m</span></div>
+      <div class="btn-row">
+        <a class="cta" href="#">Join Queue</a>
+        <a class="cta sec" href="#">Get SMS Alert</a>
+        <a class="pill" href="#">Etiquette & Rules</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cards" style="margin-top:18px">
+    <article class="card" style="grid-column:span 5">
+      <h3 style="margin:0 0 10px;font-size:var(--fs-h4)">Specials This Week</h3>
+      <p class="quiet">Wed–Sun Happy Hour 5–7 • $3 Wells • $4 Drafts • $5 Cocktails</p>
+    </article>
+
+    <article class="card" style="grid-column:span 7">
+      <h3 style="margin:0 0 10px;font-size:var(--fs-h4)">Patio & The Longest Bar</h3>
+      <p class="quiet">Room for the whole crew. Grab a spot with a view of the stage.</p>
+      <div class="thumbs" style="margin-top:10px">
+        <div class="ph">Owned photo</div>
+        <div class="ph">Owned photo</div>
+        <div class="ph">Owned photo</div>
+        <div class="ph">Owned photo</div>
+      </div>
+    </article>
+
+    <article class="card" style="grid-column:span 5">
+      <h3 style="margin:0 0 10px;font-size:var(--fs-h4)">Map & Hours</h3>
+      <p class="quiet">1234 Main St, Springfield, MO • Open till late • Patio seating</p>
+    </article>
+
+    <article class="card" style="grid-column:span 7">
+      <h3 style="margin:0 0 10px;font-size:var(--fs-h4)">Band Booking</h3>
+      <p class="quiet">Submit your EPK, dates, and tech needs. We’ll get back within 48h.</p>
+      <div class="btn-row"><a class="cta sec" href="#">Request a Date</a></div>
+    </article>
+  </section>
+</main>
+
+<!-- ============================= -->
+<!-- MOCKUP E — Poster Marquee -->
+<!-- ============================= -->
+<main id="mockup-e" class="container">
+  <section class="poster">
+    <div class="btn-row" style="justify-content:center">
+      <span class="badge">No Cover</span>
+      <span class="pill">Happy Hour 5–7</span>
+    </div>
+    <h1>TONIGHT</h1>
+    <p style="font-size:var(--fs-h5);margin:.2em 0 1em">Artist • 9:00 PM</p>
+    <div class="btn-row" style="justify-content:center">
+      <a class="cta" href="#">Add to Calendar</a>
+      <a class="cta sec" href="#">Join Karaoke Queue</a>
+      <a class="pill" href="#">Map & Hours →</a>
+    </div>
+  </section>
+
+  <section class="tiles" style="margin-top:18px">
+    <article class="tile big">
+      <h3 style="margin:0 0 8px;font-size:var(--fs-h4)">The Longest Bar</h3>
+      <div class="ph tall">Owned bar photo</div>
+    </article>
+    <article class="tile">
+      <h3 style="margin:0 0 8px;font-size:var(--fs-h4)">Weekly Specials</h3>
+      <ul class="quiet" style="line-height:1.8;margin:0;padding-left:18px">
+        <li>$3 Wells</li>
+        <li>$4 Drafts</li>
+        <li>$5 Cocktails</li>
+      </ul>
+    </article>
+    <article class="tile">
+      <h3 style="margin:0 0 8px;font-size:var(--fs-h4)">Calendar Preview</h3>
+      <p class="quiet">Thu: Blues Jam • Fri: Local Rock • Sat: Karaoke Live • Sun: Acoustic</p>
+    </article>
+    <article class="tile" style="grid-column:1/4">
+      <h3 style="margin:0 0 8px;font-size:var(--fs-h4)">Patio Gallery (owned)</h3>
+      <div class="thumbs">
+        <div class="ph">Photo</div>
+        <div class="ph">Photo</div>
+        <div class="ph">Photo</div>
+        <div class="ph">Photo</div>
+      </div>
+    </article>
+  </section>
+</main>
+
+<!-- ============================= -->
+<!-- MOCKUP F — Local Guide -->
+<!-- ============================= -->
+<main id="mockup-f" class="container">
+  <section class="top">
+    <article class="card">
+      <h2 style="margin:.2em 0 .4em;font-size:var(--fs-h2)">Patio & The Longest Bar</h2>
+      <p class="quiet">Easy vibes • Great prices • Friendly crew</p>
+      <div class="btn-row" style="margin-top:6px">
+        <span class="pill">Tonight: Artist • 9PM</span>
+        <span class="pill">No Cover</span>
+        <a class="cta" href="#">Map & Directions</a>
+      </div>
+      <div class="thumbs" style="margin-top:12px">
+        <div class="ph">Owned photo</div>
+        <div class="ph">Owned photo</div>
+        <div class="ph">Owned photo</div>
+        <div class="ph">Owned photo</div>
+      </div>
+    </article>
+    <aside class="card sticky">
+      <h3 style="margin:.2em 0;font-size:var(--fs-h3)">Tonight @ Carrie’s</h3>
+      <p class="quiet">Artist • 9:00 PM</p>
+      <div class="btn-row" style="margin-top:8px">
+        <a class="cta" href="#">Add to Calendar</a>
+        <span class="badge">No Cover</span>
+      </div>
+      <hr style="border:0;border-top:1px solid #1a3857;margin:16px 0">
+      <h4 style="margin:.2em 0;font-size:var(--fs-h4)">Karaoke Queue</h4>
+      <p class="quiet">Open • In line: 12 • Est: 38m</p>
+      <div class="btn-row"><a class="cta sec" href="#">Join Queue</a><a class="pill" href="#">Get SMS</a></div>
+    </aside>
+  </section>
+
+  <section class="guide" style="margin-top:18px">
+    <article class="card">
+      <h3 style="margin:0 0 10px;font-size:var(--fs-h4)">This Week</h3>
+      <div class="weekbar">
+        <div class="day"><strong>Thu</strong><div class="quiet">Blues Jam</div></div>
+        <div class="day"><strong>Fri</strong><div class="quiet">Local Rock</div></div>
+        <div class="day"><strong>Sat</strong><div class="quiet">Karaoke Live</div></div>
+        <div class="day"><strong>Sun</strong><div class="quiet">Acoustic</div></div>
+        <div class="day"><strong>Mon</strong><div class="quiet">Open Mic</div></div>
+        <div class="day"><strong>Tue</strong><div class="quiet">Karaoke</div></div>
+        <div class="day"><strong>Wed</strong><div class="quiet">Blues Jam</div></div>
+      </div>
+    </article>
+    <article class="card">
+      <h3 style="margin:0 0 10px;font-size:var(--fs-h4)">Weekly Specials</h3>
+      <p class="quiet">$3 Wells • $4 Drafts • $5 Cocktails • Ask at the bar</p>
+    </article>
+    <article class="card">
+      <h3 style="margin:0 0 10px;font-size:var(--fs-h4)">Map & Hours</h3>
+      <p class="quiet">1234 Main St, Springfield, MO • Open till late • Patio seating</p>
+    </article>
+    <article class="card">
+      <h3 style="margin:0 0 10px;font-size:var(--fs-h4)">Band Booking</h3>
+      <p class="quiet">Submit your EPK, dates, and tech needs. We’ll get back within 48h.</p>
+      <div class="btn-row"><a class="cta sec" href="#">Request a Date</a></div>
+    </article>
+  </section>
+</main>
+
+<!-- Little floating switch to jump between mockups while previewing -->
+<div class="switch" aria-hidden="true">View:
+  <button onclick="show('mockup-d')">Queue‑First</button>
+  <button onclick="show('mockup-e')">Poster</button>
+  <button onclick="show('mockup-f')">Local Guide</button>
+</div>
+
+<script>
+  const pages=['mockup-d','mockup-e','mockup-f'];
+  function show(id){pages.forEach(p=>document.getElementById(p).style.display = (p===id?'block':'none'));}
+  // start on Queue‑First; press 1/2/3 to switch
+  show('mockup-d');
+  addEventListener('keydown',e=>{if(['1','2','3'].includes(e.key)){show(pages[+e.key-1])}});
+</script>
+
+<!-- Theme control -->
+<div class="themebar" role="group" aria-label="Theme switcher">
+  <div class="row"><strong>Theme:</strong>
+    <button onclick="setTheme('neon','night')">Neon · Night</button>
+    <button onclick="setTheme('neon','day')">Neon · Day</button>
+    <button onclick="setTheme('sign','night')">Sign · Night</button>
+    <button onclick="setTheme('sign','day')">Sign · Day</button>
+  </div>
+  <div class="row"><strong>Mockup:</strong>
+    <button onclick="show('mockup-d')">Queue‑First</button>
+    <button onclick="show('mockup-e')">Poster</button>
+    <button onclick="show('mockup-f')">Local Guide</button>
+  </div>
+</div>
+
+<script>
+  // Persisted theme
+  function setTheme(set, mode){
+    document.body.dataset.set = set;
+    document.body.dataset.mode = mode;
+    localStorage.setItem('carries_theme', JSON.stringify({set, mode}));
+  }
+  (function initTheme(){
+    const saved = localStorage.getItem('carries_theme');
+    const def = saved ? JSON.parse(saved) : {set:'neon', mode:'night'};
+    setTheme(def.set, def.mode);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* theme-sign-day.css — Sign · Day color scheme */
+:root[data-set="sign"][data-mode="day"]{
+  /* Surfaces & text */
+  --navy: #FAFAF9;
+  --card: #FFFFFF;
+  --panel:#F5F5F4;
+  --ink:  #121417;
+  --muted:#5E6A76;
+
+  /* Accents */
+  --accent:#9A3A32;     /* warm rust red */
+  --blue:  #3A7BFF;     /* cool supporting blue */
+  --accent-2:#F2C72A;   /* sign gold */
+  --ok:    #1E9E6E;
+  --chip:  #EEEFF2;
+
+  /* Borders & decorative */
+  --border:#E3E5E8;
+  --nav-bg: #FFFFFF;
+  --day-card:#F1F1F0;
+  --day-border:#E1E3E6;
+
+  /* Placeholder visuals */
+  --ph-bg: linear-gradient(180deg,#F7F7F6,#EFEFEF);
+  --ph-border:#E4E6E8;
+  --ph-fg:#6A7887;
+}

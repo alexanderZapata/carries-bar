@@ -1,0 +1,53 @@
+/* theme-common.css — semantic color tokens (defaults). Load first. */
+/* These are neutral fallbacks so pages render even if a theme file fails to load. */
+:root {
+  /* Brand palette */
+  --navy: #0C1A2B; /* page bg */
+  --card: #0F2237; /* deep panel */
+  --panel: #0F1E2E; /* subtle alt */
+  --ink: #EBF4FF; /* primary text */
+  --muted: #B7C6D9; /* secondary text */
+
+  --accent: #E33D4E; /* red CTA */
+  --accent-2: #F0C53A; /* value yellow */
+  --ok: #20C997; /* green */
+  --blue: #3B82F6; /* action */
+  --chip: #11263D; /* chip background */
+
+
+  /* Borders & decorative */
+  --border: #16324F;
+  --nav-bg: linear-gradient(180deg, #0a1726, #0c1a2b 80%);
+  --day-card: #0F243B;
+  --day-border: #16324F;
+
+  /* Placeholder visuals */
+  --ph-bg: linear-gradient(180deg, #1a3250, #152a45);
+  --ph-border: #2a4b72;
+  --ph-fg: #8fb3d9;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns:2fr 1.1fr;
+  gap: 18px
+}
+
+.hero .panel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow)
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  margin: .25em 0 .4em
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px
+}

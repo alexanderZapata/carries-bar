@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/theme-common.css">
+  <link rel="stylesheet" href="css/theme-sign-day.css">
+  <link rel="stylesheet" href="css/theme-neon-night.css">
+
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="content-grid">
+<div class="theme-controls" style="display:flex; gap:.75rem; align-items:center">
+  <!-- Pick theme family -->
+  <label><input type="radio" name="theme-set" value="sign" checked> Sign</label>
+  <label><input type="radio" name="theme-set" value="neon"> Neon</label>
+
+  <!-- Toggle day/night -->
+  <button type="button" data-action="toggle-mode">Toggle Day/Night</button>
+</div>
+
+<nav>navigation</nav>
+
+<section class="hero">
+  <div class="panel">
+    <span class="badge">No Cover</span>
+    <h1>Tonight @ Carrie’s</h1>
+    <div class="info">
+      <span class="chip">Artist • 9:00 PM</span>
+      <span class="chip">$3 Wells</span>
+      <span class="chip">Add to Calendar →</span>
+    </div>
+    <div class="weekbar" aria-label="This week at a glance">
+      <div class="day">
+        <strong>Thu</strong>
+        <div class="quiet">Artist</div>
+        <div class="quiet">9:00 PM</div>
+        <div class="quiet">No Cover</div>
+      </div>
+      <div class="day"><strong>Fri</strong><div class="quiet">Artist</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
+      <div class="day"><strong>Sat</strong><div class="quiet">Artist</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
+      <div class="day"><strong>Sun</strong><div class="quiet">Acoustic</div><div class="quiet">8:00 PM</div><div class="quiet">No Cover</div></div>
+      <div class="day"><strong>Mon</strong><div class="quiet">Open Mic</div><div class="quiet">8:30 PM</div><div class="quiet">No Cover</div></div>
+      <div class="day"><strong>Tue</strong><div class="quiet">Karaoke</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
+      <div class="day"><strong>Wed</strong><div class="quiet">Blues Jam</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
+    </div>
+  </div>
+
+  <div class="panel queue">
+    <h2 style="margin:0 0 6px;font-size:var(--fs-h3)">Karaoke Queue</h2>
+    <div class="row quiet"><span class="pill">Open</span><span class="pill">In line: 12</span><span class="pill">Est. wait: 38m</span></div>
+    <div class="btn-row">
+      <a class="cta" href="#">Join Queue</a>
+      <a class="cta sec" href="#">Get SMS Alert</a>
+      <a class="pill" href="#">Etiquette & Rules</a>
+    </div>
+  </div>
+</section>
+
+
+
+  <script src="../../js/app.js"></script>
+
+</body>
+
+</html>

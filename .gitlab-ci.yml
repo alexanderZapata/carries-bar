@@ -1,0 +1,25 @@
+image: node:latest
+
+variables:
+  SUBFOLDER: "carries-bar"
+
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  script:
+    - npm ci
+    - npm run build
+    - mkdir -p public/${SUBFOLDER}
+    - cp -r dist/* public/${SUBFOLDER}/
+    - if [ -d audio ]; then cp -r audio public/${SUBFOLDER}/; fi
+    - cp robots.txt public/${SUBFOLDER}/
+    - cp sitemap.xml public/${SUBFOLDER}/
+    - cp favicon.ico public/${SUBFOLDER}/
+    - cp site.webmanifest public/${SUBFOLDER}/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
