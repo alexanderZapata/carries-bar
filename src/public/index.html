@@ -1,46 +1,71 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
 
+<html class="no-js" data-mode="day" data-set="sign" lang="">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title></title>
-
-  <link rel="stylesheet" href="css/root.css">
-  <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="css/site.css">
-  <link rel="stylesheet" href="css/navigation.css">
-  <link rel="stylesheet" href="css/theme-common.css">
-  <link rel="stylesheet" href="css/theme-sign-day.css">
-  <link rel="stylesheet" href="css/theme-neon-night.css">
-
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <meta content="" name="description"/>
+  <meta content="" property="og:title"/>
+  <meta content="" property="og:type"/>
+  <meta content="" property="og:url"/>
+  <meta content="" property="og:image"/>
+  <meta content="" property="og:image:alt"/>
+  <link href="/favicon.ico" rel="icon" sizes="any"/>
+  <link href="/icon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="icon.png" rel="apple-touch-icon"/>
+  <link href="site.webmanifest" rel="manifest"/>
+  <meta content="#fafafa" name="theme-color"/>
+  <link href="css/root.css" rel="stylesheet"/>
+  <link href="css/grid.css" rel="stylesheet"/>
+  <link href="css/logo.css" rel="stylesheet"/>
+  <link href="css/navigation.css" rel="stylesheet"/>
+  <link href="css/hero.css" rel="stylesheet"/>
+  <link href="css/theme-common.css" rel="stylesheet"/>
+  <link href="css/theme-sign-day.css" rel="stylesheet"/>
+  <link href="css/theme-neon-night.css" rel="stylesheet"/>
 </head>
+<body>
+<!--<div class="theme-controls" style="display:flex; gap:.75rem; align-items:center">-->
+<!--  &lt;!&ndash; Pick theme family &ndash;&gt;-->
+<!--  <label><input checked="" name="theme-set" type="radio" value="sign"/> Sign</label>-->
+<!--  <label><input name="theme-set" type="radio" value="neon"/> Neon</label>-->
+<!--  &lt;!&ndash; Toggle day/night &ndash;&gt;-->
+<!--  <button data-action="toggle-mode" type="button">Toggle Day/Night</button>-->
+<!--</div>-->
 
-<body class="content-grid">
-<div class="theme-controls" style="display:flex; gap:.75rem; align-items:center">
-  <!-- Pick theme family -->
-  <label><input type="radio" name="theme-set" value="sign" checked> Sign</label>
-  <label><input type="radio" name="theme-set" value="neon"> Neon</label>
+<nav>
+  <!-- Slide-down panel -->
+  <div class="nav-menu" id="nav-menu" tabindex="-1" role="navigation" aria-label="Primary">
+    <ul class="nav-menu-list">
+      <li><a href="#liveNow" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#techstack" class="nav-link">Tech Stack</a></li>
+      <li><a href="#blog" class="nav-link">Blog</a></li>
+    </ul>
 
-  <!-- Toggle day/night -->
-  <button type="button" data-action="toggle-mode">Toggle Day/Night</button>
+    <!-- Invisible state holder (closed by default on load/refresh) -->
+    <input id="nav-toggle" class="nav-toggle-input" type="checkbox" aria-hidden="true">
+
+    <!-- Hamburger (opens/closes via the checkbox) -->
+    <label for="nav-toggle" class="nav-toggle" role="button" aria-label="Toggle menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </label>
+  </div>
+</nav>
+<!-- Click-outside overlay (closes the menu) -->
+<label for="nav-toggle" class="nav-overlay" aria-label="Close menu"></label>
+
+
+
+
+<div class="logo">
+  <div class="sign-wrap">
+    <div class="sign" role="img" aria-label="Illuminated sign for Carries">
+      <h1 class="word">CARRIES</h1>
+    </div>
+  </div>
 </div>
-
-<nav>navigation</nav>
 
 <section class="hero">
   <div class="panel">
@@ -51,37 +76,181 @@
       <span class="chip">$3 Wells</span>
       <span class="chip">Add to Calendar →</span>
     </div>
-    <div class="weekbar" aria-label="This week at a glance">
+    <div aria-label="This week at a glance" class="weekbar">
       <div class="day">
         <strong>Thu</strong>
         <div class="quiet">Artist</div>
         <div class="quiet">9:00 PM</div>
         <div class="quiet">No Cover</div>
       </div>
-      <div class="day"><strong>Fri</strong><div class="quiet">Artist</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
-      <div class="day"><strong>Sat</strong><div class="quiet">Artist</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
-      <div class="day"><strong>Sun</strong><div class="quiet">Acoustic</div><div class="quiet">8:00 PM</div><div class="quiet">No Cover</div></div>
-      <div class="day"><strong>Mon</strong><div class="quiet">Open Mic</div><div class="quiet">8:30 PM</div><div class="quiet">No Cover</div></div>
-      <div class="day"><strong>Tue</strong><div class="quiet">Karaoke</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
-      <div class="day"><strong>Wed</strong><div class="quiet">Blues Jam</div><div class="quiet">9:00 PM</div><div class="quiet">No Cover</div></div>
+      <div class="day"><strong>Fri</strong>
+        <div class="quiet">Artist</div>
+        <div class="quiet">9:00 PM</div>
+        <div class="quiet">No Cover</div>
+      </div>
+      <div class="day"><strong>Sat</strong>
+        <div class="quiet">Artist</div>
+        <div class="quiet">9:00 PM</div>
+        <div class="quiet">No Cover</div>
+      </div>
+      <div class="day"><strong>Sun</strong>
+        <div class="quiet">Acoustic</div>
+        <div class="quiet">8:00 PM</div>
+        <div class="quiet">No Cover</div>
+      </div>
+      <div class="day"><strong>Mon</strong>
+        <div class="quiet">Open Mic</div>
+        <div class="quiet">8:30 PM</div>
+        <div class="quiet">No Cover</div>
+      </div>
+      <div class="day"><strong>Tue</strong>
+        <div class="quiet">Karaoke</div>
+        <div class="quiet">9:00 PM</div>
+        <div class="quiet">No Cover</div>
+      </div>
+      <div class="day"><strong>Wed</strong>
+        <div class="quiet">Blues Jam</div>
+        <div class="quiet">9:00 PM</div>
+        <div class="quiet">No Cover</div>
+      </div>
     </div>
   </div>
-
   <div class="panel queue">
     <h2 style="margin:0 0 6px;font-size:var(--fs-h3)">Karaoke Queue</h2>
-    <div class="row quiet"><span class="pill">Open</span><span class="pill">In line: 12</span><span class="pill">Est. wait: 38m</span></div>
+    <div class="row quiet"><span class="pill">Open</span><span class="pill">In line: 12</span><span class="pill">Est. wait: 38m</span>
+    </div>
     <div class="btn-row">
       <a class="cta" href="#">Join Queue</a>
       <a class="cta sec" href="#">Get SMS Alert</a>
-      <a class="pill" href="#">Etiquette & Rules</a>
+      <a class="pill" href="#">Etiquette &amp; Rules</a>
     </div>
   </div>
 </section>
+<script src="../../js/app.js"></script>
+<!--<script>-->
+<!--  (() => {-->
+<!--    const STORE_KEY = 'theme.pref.v1';-->
+<!--    const DEFAULT_SET = 'sign';-->
+<!--    function chicagoHour() {-->
+<!--      return Number(new Intl.DateTimeFormat('en-US', {-->
+<!--        timeZone: 'America/Chicago',-->
+<!--        hour12: false,-->
+<!--        hour: '2-digit'-->
+<!--      }).format(Date.now()));-->
+<!--    }-->
+<!--    function pickDefaultMode() {-->
+<!--      const h = chicagoHour();-->
+<!--      if (h >= 10 && h < 17) return 'day';-->
+<!--      return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'night' : 'day';-->
+<!--    }-->
+<!--    function apply(set, mode) {-->
+<!--      document.documentElement.dataset.set = set;-->
+<!--      document.documentElement.dataset.mode = mode;-->
+<!--      document.documentElement.style.colorScheme = (mode === 'night' ? 'dark' : 'light');-->
+<!--    }-->
+<!--    let saved = null;-->
+<!--    try { saved = JSON.parse(localStorage.getItem(STORE_KEY)); } catch {}-->
+<!--    const set  = (saved && saved.set)  || document.documentElement.dataset.set || DEFAULT_SET;-->
+<!--    const mode = (saved && saved.mode) || document.documentElement.dataset.mode || pickDefaultMode();-->
+<!--    apply(set, mode);-->
+<!--  })();-->
+<!--</script>-->
+<script id="theme-toggle-runtime">
+  (() => {
+    const STORE_KEY = 'theme.pref.v1';
+    const DEFAULT_SET = 'sign';
 
+    function chicagoHour() {
+      return Number(new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Chicago',
+        hour12: false,
+        hour: '2-digit'
+      }).format(Date.now()));
+    }
 
+    function pickDefaultMode() {
+      const h = chicagoHour();
+      if (h >= 10 && h < 17) return 'day';
+      return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'night' : 'day';
+    }
 
-  <script src="../../js/app.js"></script>
+    function apply(set, mode) {
+      document.documentElement.dataset.set = set;
+      document.documentElement.dataset.mode = mode;
+      document.documentElement.style.colorScheme = (mode === 'night' ? 'dark' : 'light');
+    }
+
+    function save(set, mode) {
+      try {
+        localStorage.setItem(STORE_KEY, JSON.stringify({set, mode}));
+      } catch {
+      }
+    }
+
+    // init from saved or defaults
+    let saved = null;
+    try {
+      saved = JSON.parse(localStorage.getItem(STORE_KEY));
+    } catch {
+    }
+    const initSet = (saved && saved.set) || document.documentElement.dataset.set || DEFAULT_SET;
+    const initMode = (saved && saved.mode) || document.documentElement.dataset.mode || pickDefaultMode();
+    apply(initSet, initMode);
+
+    // wire UI controls if present
+    const radios = document.querySelectorAll('input[name="theme-set"]');
+    if (radios.length) {
+      radios.forEach(r => r.checked = (r.value === initSet));
+      radios.forEach(r => r.addEventListener('change', (e) => {
+        const newSet = e.target.value;
+        apply(newSet, document.documentElement.dataset.mode);
+        save(newSet, document.documentElement.dataset.mode);
+      }));
+    }
+    const toggleBtn = document.querySelector('[data-action="toggle-mode"]');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const newMode = (document.documentElement.dataset.mode === 'day') ? 'night' : 'day';
+        apply(document.documentElement.dataset.set || DEFAULT_SET, newMode);
+        save(document.documentElement.dataset.set || DEFAULT_SET, newMode);
+      });
+    }
+  })();
+</script>
+
+<script id="theme-runtime">
+  /* === START TIME-BASED THEME DEFAULT (comment out this block to disable) === */
+  (function () {
+    function chicagoHour() {
+      return Number(new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Chicago', hour12: false, hour: '2-digit'
+      }).format(Date.now()));
+    }
+
+    var h = chicagoHour();
+    var isDay = (h >= 10 && h < 17);
+    var set = isDay ? 'sign' : 'neon';
+    var mode = isDay ? 'day' : 'night';
+    document.documentElement.dataset.set = set;
+    document.documentElement.dataset.mode = mode;
+    document.documentElement.style.colorScheme = (mode === 'night' ? 'dark' : 'light');
+  })();
+  /* === END TIME-BASED THEME DEFAULT === */
+
+  /* === START OPTIONAL TOGGLE (commented out by default) ===
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('[data-action="theme-toggle"]');
+    if(!t) return;
+    var html = document.documentElement;
+    var isSignDay = (html.dataset.set === 'sign' && html.dataset.mode === 'day');
+    var set = isSignDay ? 'neon' : 'sign';
+    var mode = isSignDay ? 'night' : 'day';
+    html.dataset.set = set;
+    html.dataset.mode = mode;
+    html.style.colorScheme = (mode === 'night' ? 'dark' : 'light');
+  });
+  === END OPTIONAL TOGGLE === */
+</script>
 
 </body>
-
 </html>

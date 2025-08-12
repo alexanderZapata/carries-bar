@@ -1,29 +1,27 @@
-.theme-neon[data-theme="night"]{
-  /* Fun color names (brand primaries) */
-  --glow-blue:  #21B7FF;
-  --glow-pink:  #FF4FA3;
-  --sunbeam:    #F2C72A; /* your yellow */
-  --olive-ring: #43E57A;
-  --soft-glow:  #F5FAFF;
+/* theme-neon-night.css — Neon · Night (aligned tokens + selector) */
+:root[data-set="neon"][data-mode="night"]{
+  /* Surfaces & text */
+  --navy: #0B0E13;
+  --card: #121826;
+  --panel:#171E2E;
+  --ink:  #E8F1FF;
+  --muted:#A7B5C7;
 
-  /* Neutrals */
-  --ink-900: #0B0F14;  /* page bg */
-  --ink-800: #0F1A26;  /* cards/nav */
-  --ink-700: #142132;  /* raised surfaces */
-  --ink-400: #9EB3C7;  /* muted text */
-  --ink-300: #1E2A3A;  /* borders */
+  /* Accents */
+  --accent:#00B8FF;     /* electric blue */
+  --blue:  #FF2DA8;     /* neon magenta */
+  --accent-2:#FFD34D;   /* neon amber */
+  --ok:    #38E4A6;
+  --chip:  #0E1A2B;
 
-  /* Roles */
-  --bg:            var(--ink-900);
-  --surface-1:     var(--ink-800);
-  --surface-2:     var(--ink-700);
-  --text:          var(--soft-glow);
-  --text-muted:    var(--ink-400);
-  --primary:       var(--glow-blue);
-  --primary-ink:   #001D2A;       /* text-on-primary fallback */
-  --accent:        var(--glow-pink);
-  --success:       var(--olive-ring);
-  --warning:       var(--sunbeam);
-  --link:          var(--glow-blue);
-  --border:        var(--ink-300);
+  /* Borders & decorative */
+  --border:#233047;
+  --nav-bg: linear-gradient(180deg,#0f1524,#0b0e13);
+  --day-card:#121D30;
+  --day-border:#23324A;
+
+  /* Placeholder visuals */
+  --ph-bg: linear-gradient(180deg,#15233b,#101a2d);
+  --ph-border:#283B5C;
+  --ph-fg:#88A7D0;
 }

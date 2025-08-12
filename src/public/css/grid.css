@@ -36,15 +36,15 @@
   grid-template-columns: inherit;
 }
 
-*.full-width {
+.full-width {
   grid-column: full-width;
 }
 
-*.breakout {
+.breakout {
   grid-column: breakout;
 }
 
-*.content {
+.content {
   grid-column: content;
 }
 

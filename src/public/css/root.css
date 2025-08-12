@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 :root {
   font-size: 16px;
@@ -30,9 +30,15 @@
   --fs-h2: clamp(2.3125rem, 1.75rem + 2.5vw, 2.75rem); /* ~37–44px */
   --fs-h1: clamp(2.875rem, 2.125rem + 3vw, 3.5rem); /* ~46–56px */
 
-  --navigation-height: 4rem;
+  --navigation-height: 8rem;
   --mobile-version-size: 860px;
+  --minimum-width-size: 320px;
+
+  /* UI tokens used by theme-common */
+  --radius: 18px;
+  --shadow: 0 10px 24px rgba(0,0,0,.35);
 }
+
 
 *,
 *::before,
@@ -48,17 +54,23 @@ a {
   color: inherit;
 }
 
+html {
+  width: 100dvw;
+  min-width: var(--minimum-width-size);
+}
+
 body {
   height: auto;
+  width: 100%;
+  min-width: var(--minimum-width-size);
+  /*display: flex;*/
+  /*flex-direction: column;*/
   overflow-x: hidden;
   font-family: var(--font-family), sans-serif;
   font-weight: var(--fw-regular);
   text-align: center;
   line-height: 1.6;
-  min-width: 320px;
   position: relative;
-  margin: 0;
-  padding: 0;
 }
 
 img {
