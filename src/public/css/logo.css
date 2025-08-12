@@ -1,14 +1,14 @@
 .logo {
   justify-content: center;
-  display: flex;
   position: relative;
   z-index: 1;
+  display: flex;
   width: 100%;
   min-width: var(--minimum-width-size);
-  height: 14vh;
-  transition: all .75s ease-in-out;
+  min-height: 14vh;
+  max-height: 14.25vh;
+  /*transition: all .75s ease-in-out;*/
   margin-top: 4rem;
-  max-height: calc(var(--navigation-height) * 2);
   align-items: center;
 }
 
@@ -20,6 +20,7 @@
   padding: 1rem;
   border-radius: 1rem;
   display: flex;
+  justify-content: center;
   position: relative;
   height: -webkit-fill-available;
   background-color: var(--accent-2);

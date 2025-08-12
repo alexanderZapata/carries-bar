@@ -27,11 +27,7 @@
   --ph-fg: #8fb3d9;
 }
 
-.hero {
-  /*display: grid;*/
-  grid-template-columns:2fr 1.1fr;
-  gap: 18px
-}
+
 
 .hero .panel {
   background: var(--panel);
