@@ -23,14 +23,31 @@
   justify-content: center;
   position: relative;
   height: -webkit-fill-available;
-  background-color: var(--accent-2);
   filter: saturate(1.05);
 }
+
+.sign{
+  position:relative;
+  isolation:isolate; /* keep inner glows contained */
+  padding: 1rem;
+  /*border: clamp(10px, 1.6vw, 18px) solid var(--frame);*/
+  border-radius: 1rem;
+  /*width:min(92vw, 1100px);*/
+  /*box-shadow: 0 0 0 rgba(255,214,64,0);*/
+  z-index:1;
+  animation: bgPowerOn 1.5s ease-in-out forwards, bgHum 8s ease-in-out 1.5s infinite;
+}
+
+div .sign {
+  animation: opacity 8s ease-in-out;
+}
+
+
 
 .word {
   position: relative;
   font-family: 'Anton', Impact, Haettenschweiler, 'Arial Black', sans-serif;
-  /*text-effect: emboss;*/
+  text-effect: emboss;
   font-size: var(--fs-h1);
   font-weight: var(--fw-regular);
   letter-spacing: .1rem;
@@ -45,23 +62,24 @@
   /*filter: brightness(.6);*/
   text-shadow: 0 3px 0 rgba(0, 0, 0, .35), /* base edge */ 0 0 0 rgba(255, 255, 255, 0); /* glow anim target */
 
-  /*animation: textFlicker 1s linear 0s forwards,*/
-  /*textHum 1.8s steps(2, end) 1.1s infinite; !* subtle on hum starts earlier *! !* subtle on hum *!*/
+  animation: textFlicker 1s linear 0s forwards,
+  textHum 1.8s steps(2, end) 1.1s infinite; /* subtle on hum starts earlier */ /* subtle on hum */
 }
 
 /* Ambient glow behind the whole sign */
 .sign-wrap::before{
-  min-width: var(--minimum-width-size);
-  max-width: 360px;
+  /*min-width: var(--minimum-width-size);*/
+  /*max-width: 360px;*/
   content:"";
-  position:absolute; inset:-2vmin;
-  /*background: radial-gradient(closest-side, rgba(255,214,64,.45), rgba(255,214,64,0) 70%);*/
+  position:absolute; inset:-8vmin;
+  background: radial-gradient(closest-side, rgba(255,214,64,.45), rgba(255,214,64,0) 70%);
   filter: blur(20px);
-  opacity:1;                       /* off until powered */
+  opacity:0;                       /* off until powered */
   pointer-events:none;
-  z-index:50000;
+  z-index:1;
   animation: glowPower 1.5s ease-in-out forwards, bgGlowHum 8s ease-in-out 1.5s infinite;
 }
+
 
 @keyframes glowPower{
   0%{opacity:0}
@@ -81,9 +99,71 @@
 }
 
 
+/* ------- Keyframes ------- */
+@keyframes bgPowerOn{
+  0%   { background:#2a2300; box-shadow:0 0 0 rgba(255,214,64,0); }
+  30%  { background:#5c4a00; box-shadow:0 0 12px rgba(255,214,64,.15); }
+  58%  { background:#c09a05; box-shadow:0 0 24px rgba(255,214,64,.28); }
+  60%  { background:#3a2e00; box-shadow:0 0 4px rgba(255,214,64,.06); }   /* quick outage during warm-up */
+  62%  { background:#d8b312; box-shadow:0 0 26px rgba(255,214,64,.33); }  /* back on */
+  80%  { background:#f2c72a; box-shadow:0 0 42px rgba(255,214,64,.45); }
+  100% { background:var(--on-yellow);
+    box-shadow:0 0 60px 12px rgba(255,214,64,.55), 0 0 160px 24px rgba(255,214,64,.25); }
+}
 
-@media (min-width: 1080px) {
-  .logo {
-    /*justify-content: start;*/
-  }
+@keyframes glowPower{
+  0%{opacity:0}
+  30%{opacity:.2}
+  58%{opacity:.35}
+  60%{opacity:.08} /* outage dip */
+  62%{opacity:.35}
+  100%{opacity:.45}
+}
+
+@keyframes bgHum{
+  0%,100%{ box-shadow:0 0 60px 12px rgba(255,214,64,.55), 0 0 160px 24px rgba(255,214,64,.25); }
+  20%   { box-shadow:0 0 56px 11px rgba(255,214,64,.52), 0 0 140px 22px rgba(255,214,64,.22); }
+  40%   { box-shadow:0 0 63px 12px rgba(255,214,64,.56), 0 0 170px 26px rgba(255,214,64,.27); }
+  60%   { box-shadow:0 0 55px 10px rgba(255,214,64,.50), 0 0 130px 20px rgba(255,214,64,.20); }
+  80%   { box-shadow:0 0 62px 12px rgba(255,214,64,.57), 0 0 165px 25px rgba(255,214,64,.26); }
+}
+
+@keyframes bgGlowHum{
+  0%,100%{opacity:.45}
+  25%{opacity:.40}
+  50%{opacity:.48}
+  75%{opacity:.42}
+}
+
+/*@keyframes textFlicker{*/
+/*  0%  {opacity:.06; filter:brightness(.6); text-shadow:0 3px 0 rgba(0,0,0,.35), 0 0 2px rgba(255,255,255,0)}*/
+/*  8%  {opacity:.28; text-shadow:0 0 4px rgba(255,255,255,.15)}*/
+/*  16% {opacity:.1}*/
+/*  27% {opacity:.45; text-shadow:0 0 6px rgba(255,255,255,.25), 0 0 18px rgba(255,255,255,.10)}*/
+/*  41% {opacity:.32}*/
+/*  55% {opacity:.70; text-shadow:0 0 9px rgba(255,255,255,.35), 0 0 22px rgba(255,255,255,.14)}*/
+/*  64% {opacity:.22}*/
+/*  78% {opacity:.86; text-shadow:0 0 12px rgba(255,255,255,.42), 0 0 28px rgba(255,255,255,.18)}*/
+/*  92% {opacity:.94}*/
+/*  100%{opacity:1; filter:brightness(1.05); text-shadow:0 0 14px rgba(255,255,255,.55), 0 0 32px rgba(255,255,255,.23)}*/
+/*}*/
+
+/*@keyframes textHum{*/
+/*  0%,100%{opacity:1; text-shadow:0 0 12px rgba(255,255,255,.45), 0 0 28px rgba(255,255,255,.18)}*/
+/*  10%{opacity:.985}*/
+/*  20%{opacity:1}*/
+/*  27%{opacity:.99}*/
+/*  35%{opacity:1}*/
+/*  47%{opacity:.985}*/
+/*  58%{opacity:1}*/
+/*  71%{opacity:.99}*/
+/*  83%{opacity:1}*/
+/*}*/
+
+@keyframes shine{
+  0%{opacity:0; background-position: 200% 50%;}
+  10%{opacity:.6}
+  50%{opacity:1; background-position: 0% 50%;}
+  90%{opacity:.5}
+  100%{opacity:0; background-position:-60% 50%;}
 }
