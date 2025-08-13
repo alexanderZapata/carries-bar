@@ -1,5 +1,9 @@
 /* theme-sign-day.css — Sign · Day color scheme */
 :root[data-set="sign"][data-mode="day"]{
+
+  /* For the yellow Carries Sign */
+  --on-yellow: #ffd750;
+
   /* Surfaces & text */
   --navy: #FAFAF9;
   --card: #FFFFFF;
@@ -8,10 +12,9 @@
   --muted:#5E6A76;
 
   /* Accents */
-  --accent:#9A3A32;     /* warm rust red */
-  --blue:  #3A7BFF;     /* cool supporting blue */
-  --accent-2:#F2C72A;   /* sign gold */
-  --on-yellow: #ffd750; /* final on */
+  --accent:#9A3A32;
+  --accent-2:#F2C72A;
+  --blue:  #3A7BFF;
   --ok:    #1E9E6E;
   --chip:  #EEEFF2;
 

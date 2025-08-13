@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="67213b41-58c2-4182-ab05-34d00fdfb81d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/carries_sign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/carries_sign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/hero.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/logo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/root.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/theme-common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/theme-common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/theme-neon-night.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/theme-neon-night.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/theme-sign-day.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/theme-sign-day.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,22 +24,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitLabMergeRequestFiltersHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPENED",
-    "assignee": {
-      "type": "org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue",
-      "username": "alexanderZapata",
-      "fullname": "Alex Zapata"
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;assignee&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,
+      &quot;username&quot;: &quot;alexanderZapata&quot;,
+      &quot;fullname&quot;: &quot;Alex Zapata&quot;
     }
   }
-}]]></component>
-  <component name="GitLabMergeRequestsSettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "first": "https://gitlab.com/alex-zapata-projects/carries-bar.git",
-    "second": "33da2b77-501d-467d-b9db-28cdd8b17863"
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;https://gitlab.com/alex-zapata-projects/carries-bar.git&quot;,
+    &quot;second&quot;: &quot;33da2b77-501d-467d-b9db-28cdd8b17863&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -44,24 +49,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "E:/repos/carries-bar/src/public/css",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/repos/carries-bar/src/public/css&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\repos\carries-bar\src\public\css" />

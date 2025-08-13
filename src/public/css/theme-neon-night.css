@@ -8,20 +8,20 @@
   --muted:#A7B5C7;
 
   /* Accents */
-  --accent:#00B8FF;     /* electric blue */
-  --blue:  #FF2DA8;     /* neon magenta */
-  --accent-2:#FFD34D;   /* neon amber */
+  --accent:#00B8FF;
+  --accent-2:#FFD34D;
+  --blue:  #FF2DA8;
   --ok:    #38E4A6;
   --chip:  #0E1A2B;
 
   /* Borders & decorative */
   --border:#233047;
-  --nav-bg: linear-gradient(180deg,#0f1524,#0b0e13);
+  --nav-bg: linear-gradient(180deg, #0a1726, #0c1a2b 80%);
   --day-card:#121D30;
   --day-border:#23324A;
 
-  /* Placeholder visuals */
-  --ph-bg: linear-gradient(180deg,#15233b,#101a2d);
-  --ph-border:#283B5C;
-  --ph-fg:#88A7D0;
+  /*!* Placeholder visuals *!*/
+  /*--ph-bg: linear-gradient(180deg,#15233b,#101a2d);*/
+  /*--ph-border:#283B5C;*/
+  /*--ph-fg:#88A7D0;*/
 }

@@ -1,4 +1,3 @@
-@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -37,7 +36,7 @@
 
   /* UI tokens used by theme-common */
   --radius: 18px;
-  --shadow: 0 10px 24px rgba(0,0,0,.35);
+  --shadow: 0 10px 24px rgba(0, 0, 0, .35);
 }
 
 
@@ -56,23 +55,16 @@ a {
 }
 
 html {
-  width: 100dvw;
-  min-width: var(--minimum-width-size);
+  /*width: 100dvw;*/
+  /*min-width: var(--minimum-width-size);*/
 }
 
 body {
-  height: auto;
-  width: 100%;
-  min-width: var(--minimum-width-size);
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   font-family: var(--font-family), sans-serif;
   font-weight: var(--fw-regular);
-  text-align: center;
   line-height: 1.6;
   position: relative;
-  padding: .15rem;
 }
 
 img {

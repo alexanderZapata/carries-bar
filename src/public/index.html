@@ -17,7 +17,7 @@
   <link href="site.webmanifest" rel="manifest"/>
   <meta content="#fafafa" name="theme-color"/>
   <link href="css/root.css" rel="stylesheet"/>
-  <!--  <link href="css/grid.css" rel="stylesheet"/>-->
+  <link href="css/grid.css" rel="stylesheet"/>
   <link href="css/logo.css" rel="stylesheet"/>
   <link href="css/navigation.css" rel="stylesheet"/>
   <link href="css/hero.css" rel="stylesheet"/>
@@ -26,139 +26,147 @@
   <link href="css/theme-neon-night.css" rel="stylesheet"/>
   <link rel="stylesheet" href="../../node_modules/@flaticon/flaticon-uicons/css/all/all.css">
 </head>
-<body>
-<nav>
-  <!-- Slide-down panel -->
-  <div class="nav-menu" id="nav-menu" tabindex="-1" role="navigation" aria-label="Primary">
-    <ul class="nav-menu-list">
-      <li><a href="#liveNow" class="nav-link">About</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#techstack" class="nav-link">Tech Stack</a></li>
-      <li><a href="#blog" class="nav-link">Blog</a></li>
-    </ul>
+<body class="content-grid">
+<!--<nav class="full-width" aria-label="Main navigation" role="navigation" data-grid-area="nav">-->
+<!--  &lt;!&ndash; Slide-down panel &ndash;&gt;-->
+<!--  <div class="nav-menu" id="nav-menu" tabindex="-1" role="navigation" aria-label="">-->
+<!--    <ul class="nav-menu-list">-->
+<!--      <li><a href="#liveNow" class="nav-link">About</a></li>-->
+<!--      <li><a href="#projects" class="nav-link">Projects</a></li>-->
+<!--      <li><a href="#techstack" class="nav-link">Tech Stack</a></li>-->
+<!--      <li><a href="#blog" class="nav-link">Blog</a></li>-->
+<!--    </ul>-->
 
-    <!-- Invisible state holder (closed by default on load/refresh) -->
-    <input id="nav-toggle" class="nav-toggle-input" type="checkbox" aria-hidden="true">
+<!--    &lt;!&ndash; Invisible state holder (closed by default on load/refresh) &ndash;&gt;-->
+<!--    <input id="nav-toggle" class="nav-toggle-input" type="checkbox" aria-hidden="true">-->
 
-    <!-- Hamburger (opens/closes via the checkbox) -->
-    <label for="nav-toggle" class="nav-toggle" role="button" aria-label="Toggle menu">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </label>
-  </div>
-</nav>
-<!-- Click-outside overlay (closes the menu) -->
-<label for="nav-toggle" class="nav-overlay" aria-label="Close menu"></label>
+<!--    &lt;!&ndash; Hamburger (opens/closes via the checkbox) &ndash;&gt;-->
+<!--    <label for="nav-toggle" class="nav-toggle" role="button" aria-label="Toggle menu">-->
+<!--      <span class="bar"></span><span class="bar"></span><span class="bar"></span>-->
+<!--    </label>-->
+<!--  </div>-->
 
 
-<section class="logo">
-  <div class="sign-wrap">
-    <div class="sign" role="img" aria-label="Illuminated sign for Carries">
-      <h1 class="word">CARRIES</h1>
-    </div>
-  </div>
-</section>
+<!--  &lt;!&ndash; Click-outside overlay (closes the menu) &ndash;&gt;-->
+<!--  <label for="nav-toggle" class="nav-overlay" aria-label="Close menu"></label>-->
+<!--</nav>-->
 
-<section class="hero">
-  <div class="hero-carousel">
-    <div class="carousel-selector-container">
-      <div class="badge">Live Now!</div>
-      <div class="badge">Coming Up</div>
-      <div class="badge">This Week</div>
-    </div>
-    <div class="panel">
-      <h1>The Week Ahead</h1>
-      <div class="weekly-look-nav-container">
-        <div class="chip"><i class="fi fi-bs-angle-left"></i>&nbsp;Back&nbsp;to&nbsp;Today</div>
-        <div class="chip tester">Next&nbsp;Few&nbsp;Days<i class="fi fi-bs-angle-right"></i></div>
-      </div>
-      <div aria-label="This week at a glance" class="weekbar">
-        <div class="day"><strong>Sat</strong>
-          <div class="quiet">Artist</div>
-          <div class="quiet">9:00 PM</div>
-          <div class="quiet">No Cover</div>
-        </div>
-        <div class="day"><strong>Sun</strong>
-          <div class="quiet">Acoustic</div>
-          <div class="quiet">8:00 PM</div>
-          <div class="quiet">No Cover</div>
-        </div>
-        <div class="day"><strong>Mon</strong>
-          <div class="quiet">Open Mic</div>
-          <div class="quiet">8:30 PM</div>
-          <div class="quiet">No Cover</div>
-        </div>
-      </div>
-    </div>
 
-    <!--    <div class="panel">-->
-    <!--      <h1>Tonight @ Carrie’s</h1>-->
-    <!--      <div class="weekly-look-nav-container">-->
-    <!--        <div class="chip"><i class="fi fi-bs-angle-left"></i>&nbsp;Back&nbsp;to&nbsp;Today</div>-->
-    <!--        <div class="chip tester">Next&nbsp;Few&nbsp;Days<i class="fi fi-bs-angle-right"></i></div>-->
-    <!--      </div>-->
-    <!--      <div aria-label="This week at a glance" class="weekbar">-->
-    <!--        <div class="day"><strong>Sat</strong>-->
-    <!--          <div class="quiet">Artist</div>-->
-    <!--          <div class="quiet">9:00 PM</div>-->
-    <!--          <div class="quiet">No Cover</div>-->
-    <!--        </div>-->
-    <!--        <div class="day"><strong>Sun</strong>-->
-    <!--          <div class="quiet">Acoustic</div>-->
-    <!--          <div class="quiet">8:00 PM</div>-->
-    <!--          <div class="quiet">No Cover</div>-->
-    <!--        </div>-->
-    <!--        <div class="day"><strong>Mon</strong>-->
-    <!--          <div class="quiet">Open Mic</div>-->
-    <!--          <div class="quiet">8:30 PM</div>-->
-    <!--          <div class="quiet">No Cover</div>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
+<!--<section class="logo">-->
+<!--  <div class="sign-wrap">-->
+<!--    <div class="sign" role="img" aria-label="Illuminated sign for Carries">-->
+<!--      <h1 class="word">CARRIES</h1>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
-    <!--    <div class="panel">-->
-    <!--      <h1>Tonight @ Carrie’s</h1>-->
-    <!--      <div class="weekly-look-nav-container">-->
-    <!--        <div class="chip"><i class="fi fi-bs-angle-left"></i>&nbsp;Back&nbsp;to&nbsp;Today</div>-->
-    <!--        <div class="chip tester">Next&nbsp;Few&nbsp;Days<i class="fi fi-bs-angle-right"></i></div>-->
-    <!--      </div>-->
-    <!--      <div aria-label="This week at a glance" class="weekbar">-->
-    <!--        <div class="day"><strong>Sat</strong>-->
-    <!--          <div class="quiet">Artist</div>-->
-    <!--          <div class="quiet">9:00 PM</div>-->
-    <!--          <div class="quiet">No Cover</div>-->
-    <!--        </div>-->
-    <!--        <div class="day"><strong>Sun</strong>-->
-    <!--          <div class="quiet">Acoustic</div>-->
-    <!--          <div class="quiet">8:00 PM</div>-->
-    <!--          <div class="quiet">No Cover</div>-->
-    <!--        </div>-->
-    <!--        <div class="day"><strong>Mon</strong>-->
-    <!--          <div class="quiet">Open Mic</div>-->
-    <!--          <div class="quiet">8:30 PM</div>-->
-    <!--          <div class="quiet">No Cover</div>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
-  </div>
+<section class="hero-container">
+  <div class="panel hero-carousel">test</div>
 
-  <div class="karaoke-que-container panel">
-
-  </div>
 </section>
 
 
-<section class="drink-que-container">
-  <div class="panel queue">
-    <h2 style="margin:0 0 6px;font-size:var(--fs-h3)">Karaoke Queue</h2>
-    <div class="row quiet"><span class="pill">Open</span><span class="pill">In line: 12</span><span class="pill">Est. wait: 38m</span>
-    </div>
-    <div class="btn-row">
-      <a class="cta" href="#">Join Queue</a>
-      <a class="cta sec" href="#">Get SMS Alert</a>
-      <a class="pill" href="#">Etiquette &amp; Rules</a>
-    </div>
-  </div>
-</section>
+<!--<section class="hero full-width" id="liveNow" data-grid-area="hero">-->
+<!--  <div class="hero-carousel">-->
+<!--    <div class="carousel-selector-container">-->
+<!--      <div class="badge">Live Now!</div>-->
+<!--      <div class="badge">Coming Up</div>-->
+<!--      <div class="badge">This Week</div>-->
+<!--    </div>-->
+<!--    <div class="panel">-->
+<!--      <h1>The Week Ahead</h1>-->
+<!--      <div class="weekly-look-nav-container">-->
+<!--        <div class="chip"><i class="fi fi-bs-angle-left"></i>&nbsp;Back&nbsp;to&nbsp;Today</div>-->
+<!--        <div class="chip tester">Next&nbsp;Few&nbsp;Days<i class="fi fi-bs-angle-right"></i></div>-->
+<!--      </div>-->
+<!--      <div aria-label="This week at a glance" class="weekbar">-->
+<!--        <div class="day"><strong>Sat</strong>-->
+<!--          <div class="quiet">Artist</div>-->
+<!--          <div class="quiet">9:00 PM</div>-->
+<!--          <div class="quiet">No Cover</div>-->
+<!--        </div>-->
+<!--        <div class="day"><strong>Sun</strong>-->
+<!--          <div class="quiet">Acoustic</div>-->
+<!--          <div class="quiet">8:00 PM</div>-->
+<!--          <div class="quiet">No Cover</div>-->
+<!--        </div>-->
+<!--        <div class="day"><strong>Mon</strong>-->
+<!--          <div class="quiet">Open Mic</div>-->
+<!--          <div class="quiet">8:30 PM</div>-->
+<!--          <div class="quiet">No Cover</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="panel">-->
+<!--      <h1>Tonight @ Carrie’s</h1>-->
+<!--      <div class="weekly-look-nav-container">-->
+<!--        <div class="chip"><i class="fi fi-bs-angle-left"></i>&nbsp;Back&nbsp;to&nbsp;Today</div>-->
+<!--        <div class="chip tester">Next&nbsp;Few&nbsp;Days<i class="fi fi-bs-angle-right"></i></div>-->
+<!--      </div>-->
+<!--      <div aria-label="This week at a glance" class="weekbar">-->
+<!--        <div class="day"><strong>Sat</strong>-->
+<!--          <div class="quiet">Artist</div>-->
+<!--          <div class="quiet">9:00 PM</div>-->
+<!--          <div class="quiet">No Cover</div>-->
+<!--        </div>-->
+<!--        <div class="day"><strong>Sun</strong>-->
+<!--          <div class="quiet">Acoustic</div>-->
+<!--          <div class="quiet">8:00 PM</div>-->
+<!--          <div class="quiet">No Cover</div>-->
+<!--        </div>-->
+<!--        <div class="day"><strong>Mon</strong>-->
+<!--          <div class="quiet">Open Mic</div>-->
+<!--          <div class="quiet">8:30 PM</div>-->
+<!--          <div class="quiet">No Cover</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="panel">-->
+<!--      <h1>Tonight @ Carrie’s</h1>-->
+<!--      <div class="weekly-look-nav-container">-->
+<!--        <div class="chip"><i class="fi fi-bs-angle-left"></i>&nbsp;Back&nbsp;to&nbsp;Today</div>-->
+<!--        <div class="chip tester">Next&nbsp;Few&nbsp;Days<i class="fi fi-bs-angle-right"></i></div>-->
+<!--      </div>-->
+<!--      <div aria-label="This week at a glance" class="weekbar">-->
+<!--        <div class="day"><strong>Sat</strong>-->
+<!--          <div class="quiet">Artist</div>-->
+<!--          <div class="quiet">9:00 PM</div>-->
+<!--          <div class="quiet">No Cover</div>-->
+<!--        </div>-->
+<!--        <div class="day"><strong>Sun</strong>-->
+<!--          <div class="quiet">Acoustic</div>-->
+<!--          <div class="quiet">8:00 PM</div>-->
+<!--          <div class="quiet">No Cover</div>-->
+<!--        </div>-->
+<!--        <div class="day"><strong>Mon</strong>-->
+<!--          <div class="quiet">Open Mic</div>-->
+<!--          <div class="quiet">8:30 PM</div>-->
+<!--          <div class="quiet">No Cover</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="karaoke-que-container panel">-->
+
+<!--  </div>-->
+<!--</section>-->
+
+
+<!--<section class="drink-que-container">-->
+<!--  <div class="panel queue">-->
+<!--    <h2 style="margin:0 0 6px;font-size:var(&#45;&#45;fs-h3)">Karaoke Queue</h2>-->
+<!--    <div class="row quiet"><span class="pill">Open</span><span class="pill">In line: 12</span><span class="pill">Est. wait: 38m</span>-->
+<!--    </div>-->
+<!--    <div class="btn-row">-->
+<!--      <a class="cta" href="#">Join Queue</a>-->
+<!--      <a class="cta sec" href="#">Get SMS Alert</a>-->
+<!--      <a class="pill" href="#">Etiquette &amp; Rules</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 <!--<script src="js/app.js"></script>-->
 <!--<script src="js/navigation.js"></script>-->
 <!--<script>-->
