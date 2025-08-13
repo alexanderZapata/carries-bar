@@ -1,12 +1,30 @@
 .hero {
-  overflow-x: hidden;
   display: grid;
-  /*grid-template-columns:4fr 1fr;*/
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  overflow-x: hidden;
   gap: 1rem;
-  padding: 1rem 0;
-  margin: auto auto;
+  padding: 1rem;
+  margin-top: var(--flow-spacing);
   width: -webkit-fill-available;
-  /*background: blue;*/
+  background: var(--muted);
+}
+
+@media screen and (min-width: 1080px) {
+  .hero {
+    grid-template-columns: 8fr 4fr;
+  }
+}
+
+.hero-carousel {
+  width: -webkit-fill-available;
+}
+
+.carousel-selector-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
 }
 
 .drink-que-container {

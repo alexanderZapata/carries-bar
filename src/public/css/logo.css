@@ -8,7 +8,7 @@
   min-height: 14vh;
   max-height: 22vh;
   /*transition: all .75s ease-in-out;*/
-  margin-top: 4rem;
+  margin-top: calc(var(--flow-spacing) * 2.5);
   align-items: center;
 }
 
