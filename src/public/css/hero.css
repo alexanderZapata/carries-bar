@@ -63,11 +63,13 @@
   height: 100%;
   /*display: block;*/
 }
-.queue-panel:hover,
+
+.queue-panel:has(button:focus-within),
 .queue-panel:focus-within {
-  transform: translate(-10%, -15%);
+  transform: translate(0, -15%);
 }
 
+/*.queue-panel:hover:has(.queue-icon-list-item:has(:focus-visible)),*/
 .queue-icon-list-item:focus-within {
   filter: grayscale(0%);
 }
