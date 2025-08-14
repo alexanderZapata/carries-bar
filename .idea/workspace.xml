@@ -8,8 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/hero.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/root.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/theme-neon-night.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/theme-neon-night.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/theme-sign-day.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/theme-sign-day.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/theme-common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/theme-common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +72,8 @@
       <recent name="E:\repos\carries-bar\src\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\repos\carries-bar\src\public\images\icons" />
+      <recent name="E:\repos\carries-bar\src\public\images" />
       <recent name="E:\repos\carries-bar\src\public\css" />
       <recent name="E:\repos\carries-bar\src\public" />
     </key>
