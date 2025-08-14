@@ -18,18 +18,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .75rem;
+  gap: .05rem;
   border-radius: 1rem;
   padding: 0;
   overflow-x: hidden;
   box-shadow: var(--shadow);
   width: 50vw;
+  transform: translateY(40%);
+  z-index: 3;
+  transition: transform .35s ease, opacity .35s ease, background-color .35s ease;
 
   h1 {
     font-size: var(--fs-h4);
     text-align: center;
   }
 }
+
+.que-panel-header {
+  font-size: var(--fs-h5);
+}
+
 .que-icon-list {
   display: flex;
   gap: .5rem;
@@ -51,9 +59,16 @@
   outline: inherit;
   appearance: none;
   border-radius: 0;
+  width: 100%;
+  height: 100%;
+  /*display: block;*/
 }
 
-button:focus-within .que-icon-list-item{
+.que-panel:has(.que-icon-list-item:focus-within) {
+  transform: translateY(-15%) translateX(-10%);
+}
+
+.que-icon-list-item:focus-within {
   filter: grayscale(0%);
 }
 
@@ -84,7 +99,7 @@ button:focus-within .que-icon-list-item{
     right: unset;
   }
 
-  .hero-container h1{
+  .hero-container h1 {
     font-size: var(--fs-p);
     text-align: center;
   }
