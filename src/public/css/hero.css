@@ -9,7 +9,7 @@
   background: var(--muted);
 }
 
-.hero-container .que-panel {
+.hero-container .queue-panel {
   position: fixed;
   bottom: 0;
   right: 1%;
@@ -34,11 +34,11 @@
   }
 }
 
-.que-panel-header {
+.queue-panel-header {
   font-size: var(--fs-h5);
 }
 
-.que-icon-list {
+.queue-icon-list {
   display: flex;
   gap: .5rem;
   justify-content: space-evenly;
@@ -49,7 +49,7 @@
   margin: 0;
 }
 
-.que-icon-list-item-btn {
+.queue-icon-list-item-btn {
   background: none;
   color: inherit;
   border: none;
@@ -64,15 +64,15 @@
   /*display: block;*/
 }
 
-.que-panel:has(.que-icon-list-item:focus-within) {
+.queue-panel:focus-within {
   transform: translateY(-15%) translateX(-10%);
 }
 
-.que-icon-list-item:focus-within {
+.queue-icon-list-item:focus-within {
   filter: grayscale(0%);
 }
 
-.que-icon-list-item {
+.queue-icon-list-item {
   overflow: hidden;
   height: 50px;
   width: 50px;
