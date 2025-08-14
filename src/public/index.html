@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="no-js" data-mode="day" data-set="sign" lang="">
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -17,7 +17,7 @@
   <link href="site.webmanifest" rel="manifest"/>
   <meta content="#fafafa" name="theme-color"/>
   <link href="css/root.css" rel="stylesheet"/>
-  <link href="css/grid.css" rel="stylesheet"/>
+<!--  <link href="css/grid.css" rel="stylesheet"/>-->
   <link href="css/logo.css" rel="stylesheet"/>
   <link href="css/navigation.css" rel="stylesheet"/>
   <link href="css/hero.css" rel="stylesheet"/>
@@ -26,7 +26,7 @@
   <link href="css/theme-neon-night.css" rel="stylesheet"/>
   <link rel="stylesheet" href="../../node_modules/@flaticon/flaticon-uicons/css/all/all.css">
 </head>
-<body class="content-grid">
+<body>
 <!--<nav class="full-width" aria-label="Main navigation" role="navigation" data-grid-area="nav">-->
 <!--  &lt;!&ndash; Slide-down panel &ndash;&gt;-->
 <!--  <div class="nav-menu" id="nav-menu" tabindex="-1" role="navigation" aria-label="">-->
@@ -60,8 +60,9 @@
 <!--  </div>-->
 <!--</section>-->
 
-<section class="hero-container">
+<section class="full-width hero-container">
   <div class="panel hero-carousel">test</div>
+  <div class="panel que-panel">Que Panel</div>
 
 </section>
 
@@ -197,68 +198,7 @@
 <!--    apply(set, mode);-->
 <!--  })();-->
 <!--</script>-->
-<script id="theme-toggle-runtime">
-  (() => {
-    const STORE_KEY = 'theme.pref.v1';
-    const DEFAULT_SET = 'sign';
 
-    function chicagoHour() {
-      return Number(new Intl.DateTimeFormat('en-US', {
-        timeZone: 'America/Chicago',
-        hour12: false,
-        hour: '2-digit'
-      }).format(Date.now()));
-    }
-
-    function pickDefaultMode() {
-      const h = chicagoHour();
-      if (h >= 10 && h < 17) return 'day';
-      return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'night' : 'day';
-    }
-
-    function apply(set, mode) {
-      document.documentElement.dataset.set = set;
-      document.documentElement.dataset.mode = mode;
-      document.documentElement.style.colorScheme = (mode === 'night' ? 'dark' : 'light');
-    }
-
-    function save(set, mode) {
-      try {
-        localStorage.setItem(STORE_KEY, JSON.stringify({set, mode}));
-      } catch {
-      }
-    }
-
-    // init from saved or defaults
-    let saved = null;
-    try {
-      saved = JSON.parse(localStorage.getItem(STORE_KEY));
-    } catch {
-    }
-    const initSet = (saved && saved.set) || document.documentElement.dataset.set || DEFAULT_SET;
-    const initMode = (saved && saved.mode) || document.documentElement.dataset.mode || pickDefaultMode();
-    apply(initSet, initMode);
-
-    // wire UI controls if present
-    const radios = document.querySelectorAll('input[name="theme-set"]');
-    if (radios.length) {
-      radios.forEach(r => r.checked = (r.value === initSet));
-      radios.forEach(r => r.addEventListener('change', (e) => {
-        const newSet = e.target.value;
-        apply(newSet, document.documentElement.dataset.mode);
-        save(newSet, document.documentElement.dataset.mode);
-      }));
-    }
-    const toggleBtn = document.querySelector('[data-action="toggle-mode"]');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', () => {
-        const newMode = (document.documentElement.dataset.mode === 'day') ? 'night' : 'day';
-        apply(document.documentElement.dataset.set || DEFAULT_SET, newMode);
-        save(document.documentElement.dataset.set || DEFAULT_SET, newMode);
-      });
-    }
-  })();
-</script>
 
 <script id="theme-runtime">
   /* === START TIME-BASED THEME DEFAULT (comment out this block to disable) === */
@@ -271,11 +211,7 @@
 
     var h = chicagoHour();
     var isDay = (h >= 10 && h < 17);
-    var set = isDay ? 'sign' : 'neon';
-    var mode = isDay ? 'day' : 'night';
-    document.documentElement.dataset.set = set;
-    document.documentElement.dataset.mode = mode;
-    document.documentElement.style.colorScheme = (mode === 'night' ? 'dark' : 'light');
+    document.documentElement.dataset.mode = true ? 'day' : 'night';
   })();
   /* === END TIME-BASED THEME DEFAULT === */
 

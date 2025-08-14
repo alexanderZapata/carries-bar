@@ -65,6 +65,8 @@ body {
   font-weight: var(--fw-regular);
   line-height: 1.6;
   position: relative;
+  padding: .05rem;
+  background: var(--body-background);
 }
 
 img {

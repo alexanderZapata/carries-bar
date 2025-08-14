@@ -1,5 +1,4 @@
-/* theme-neon-night.css — Neon · Night (aligned tokens + selector) */
-:root[data-set="neon"][data-mode="night"]{
+:root[data-mode="night"]{
   /* Surfaces & text */
   --navy: #0B0E13;
   --card: #121826;
@@ -24,4 +23,7 @@
   /*--ph-bg: linear-gradient(180deg,#15233b,#101a2d);*/
   /*--ph-border:#283B5C;*/
   /*--ph-fg:#88A7D0;*/
+
+  /*Uses the Navy color*/
+  --body-background: #0B0E13;
 }

@@ -1,12 +1,9 @@
 .hero-container {
-  display: grid;
-  grid-template-columns:repeat(3, 1fr);
-  flex-direction: column;
+  /*display: grid;*/
+  grid-template-columns:repeat(3, 2fr)!important;
+
   overflow-x: hidden;
   gap: 1rem;
-  padding: 1rem;
-  margin-top: var(--flow-spacing);
-  width: -webkit-fill-available;
   background: var(--muted);
 }
 
