@@ -13,7 +13,7 @@ module.exports = merge(common, {
     new CopyPlugin({
       patterns: [
         // Copy static assets from src/public into the dist folder
-        { from: 'src/public/images', to: 'img' },
+        { from: 'src/public/images', to: 'images' },
         { from: 'src/public/css', to: 'css' },
         { from: 'src/public/js/vendor', to: 'js/vendor' },
         { from: 'src/public/icon.svg', to: 'icon.svg' },
