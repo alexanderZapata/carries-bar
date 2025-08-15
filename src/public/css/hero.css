@@ -119,6 +119,11 @@
   border: 0;
 }
 
+.carousel-selector-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 
 
 @media screen and (min-width: 915px) {
@@ -129,15 +134,19 @@
   }
 
   .hero-container .hero-carousel {
-    grid-column: 1/8;
-    /*grid-area: 1/10;*/
+    grid-column: 1/12;
   }
 
   .hero-container .queue-panel {
-    grid-column: 8/13;
+    grid-column: 12/13;
     position: relative;
     bottom: unset;
     right: unset;
+    transform: translate(0, 0);
+  }
+
+  .queue-panel:has(.queue-radio:checked:not(#q-none)) {
+    transform: translate(0, 0);
   }
 
   .hero-container h1 {
