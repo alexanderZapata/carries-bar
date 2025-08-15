@@ -1,3 +1,25 @@
+.carousel {
+  display: flex;
+  background: var(--day-card);
+  flex-direction: row;
+  gap: 2rem;
+  grid-template-columns: 9fr 3fr;
+  color: black;
+  justify-content: space-between;
+  padding: var(--padding);
+  background: var(--day-card);
+  border-radius: var(--radius);
+}
+
+@media screen and (min-width: 765px) {
+  .carousel {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+    gap: .5rem;
+
+  }
+}
+
 .hero-container {
   position: relative;
   display: grid;
@@ -15,17 +37,16 @@
   gap: 2rem;
 }
 
-.carousel {
-  display: grid;
-  /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
-  grid-template-columns: 9fr 3fr;
-  gap: .05rem;
-  background: var(--day-card);
-  color: black;
-  border-radius: var(--radius);
-  padding: var(--padding);
-
-}
+/*.carousel {*/
+/*  display: grid;*/
+/*  !*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*!*/
+/*  grid-template-columns: 9fr 3fr;*/
+/*  gap: .5rem;*/
+/*  background: var(--day-card);*/
+/*  color: black;*/
+/*  border-radius: var(--radius);*/
+/*  padding: var(--padding);*/
+/*}*/
 
 .carousel-items {
   order: 1;
