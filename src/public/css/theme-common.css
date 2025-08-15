@@ -16,7 +16,6 @@
 .pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   background: var(--chip);
   border: 1px solid color-mix(var(--chip) 65%, white 35%);
   border-radius: 999px;
