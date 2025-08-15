@@ -5,15 +5,36 @@
   padding: var(--padding);
   margin-top: var(--flow-spacing);
   overflow-x: hidden;
-  gap: .5rem;
-  background: var(--muted);
+  gap: 3.5rem;
+  color: var(--ink);
+}
+
+.hero-container .carousel-panel {
+  background: var(--panel-background);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.carousel {
+  background: var(--day-card);
+  color: black;
+  border-radius: var(--radius);
+  padding: var(--padding);
+
+}
+
+
+.carousel-selector-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .hero-container .queue-panel {
   position: fixed;
   bottom: 0;
   right: 1%;
-  background: var(--muted);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +43,6 @@
   border-radius: 1rem;
   padding: 0;
   overflow-x: hidden;
-  box-shadow: var(--shadow);
   width: 50vw;
   transform: translate(0, 40%);
   z-index: 3;
@@ -95,7 +115,8 @@
   position: fixed;
   inset: 0;
   background: transparent;
-  z-index: 2;opacity: 0;
+  z-index: 2;
+  opacity: 0;
   pointer-events: none;
   -webkit-tap-highlight-color: transparent;
   transition: opacity .35s ease;
@@ -119,13 +140,6 @@
   border: 0;
 }
 
-.carousel-selector-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-
 @media screen and (min-width: 915px) {
   .hero-container {
     display: grid;
@@ -135,6 +149,8 @@
 
   .hero-container .hero-carousel {
     grid-column: 1 / 8;
+    display: flex;
+    background: purple;
   }
 
   .hero-container .queue-panel {

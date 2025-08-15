@@ -1,4 +1,15 @@
-:root[data-mode="day"]{
+:root[data-mode="day"] {
+
+  /*** MAIN ITEMS ***/
+  --body-background: #FAFAF9;
+
+  /** PANEL ONLY RELATED ITEMS **/
+  --panel-background: #102034;
+  --panel-font-color: #FFFFFF;
+  --panel-shadow: 0 .6rem 1.35rem rgba(0, 0, 0, .7);
+
+  --muted: #5E6A76;
+
 
   /* For the yellow Carries Sign */
   --on-yellow: #ffd750;
@@ -6,27 +17,20 @@
   /* Surfaces & text */
   --navy: #FAFAF9;
   --card: #FFFFFF;
-  --panel:#F5F5F4;
-  --ink:  #121417;
-  --muted:#5E6A76;
+  --ink: #121417;
 
   /* Accents */
-  --accent:#9A3A32;
-  --accent-2:#F2C72A;
-  --blue:  #3A7BFF;
-  --ok:    #1E9E6E;
-  --chip:  #EEEFF2;
+  --accent: #9A3A32;
+  --accent-2: #F2C72A;
+  --blue: #3A7BFF;
+  --ok: #1E9E6E;
+  --chip: #EEEFF2;
 
   /* Borders & decorative */
-  --border:#E3E5E8;
+  --border: #E3E5E8;
   --nav-bg: #FFFFFF;
-  --day-card:#F1F1F0;
-  --day-border:#E1E3E6;
+  --day-card: #F1F1F0;
+  --day-border: #E1E3E6;
 
-  /* Placeholder visuals */
-  --ph-bg: linear-gradient(180deg,#F7F7F6,#EFEFEF);
-  --ph-border:#E4E6E8;
-  --ph-fg:#6A7887;
 
-  --body-background: #FAFAF9;
 }

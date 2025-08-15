@@ -40,11 +40,10 @@
   --minimum-width-size: 320px;
 
   /* UI tokens used by theme-common */
-  --radius: 18px;
-  --shadow: 0 10px 24px rgba(0, 0, 0, .35);
+  --radius: 1rem;
+  --shadow: 0 .6rem 1.35rem rgba(0, 0, 0, .7);
   --padding: 1rem;
 }
-
 
 *,
 *::before,
@@ -129,20 +128,5 @@ p {
 
 .bold {
   font-weight: bold;
-}
-
-
-/* --- Shared components used in index.html --- */
-.badge {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-self: center;
-  background: var(--accent-2);
-  color: #2b1b00;
-  border-radius: 999px;
-  padding: .5rem 1rem;
-  font-weight: var(--fw-medium);
-  font-size: var(--fs-sp);
 }
 
