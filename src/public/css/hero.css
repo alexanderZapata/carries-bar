@@ -27,6 +27,8 @@
   transform: translate(0, 40%);
   z-index: 3;
   transition: transform .35s ease, opacity .35s ease, background-color .35s ease;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
 
   h1 {
     font-size: var(--fs-h4);
@@ -93,7 +95,15 @@
   position: fixed;
   inset: 0;
   background: transparent;
-  z-index: 2;
+  z-index: 2;opacity: 0;
+  pointer-events: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity .35s ease;
+}
+
+.hero-container:has(.queue-radio:checked:not(#q-none)) .queue-overlay {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Hide radios but keep them accessible */
