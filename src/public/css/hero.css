@@ -134,12 +134,13 @@
   }
 
   .hero-container .hero-carousel {
-    grid-column: 1/12;
+    grid-column: 1 / 8;
   }
 
   .hero-container .queue-panel {
-    grid-column: 12/13;
+    grid-column: 8 / 13;
     position: relative;
+    width: unset;
     bottom: unset;
     right: unset;
     transform: translate(0, 0);
