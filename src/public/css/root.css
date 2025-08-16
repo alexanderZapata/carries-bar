@@ -147,6 +147,7 @@ li {
   width: 100vw;
   height: auto;
   background: var(--day-card);
+  overflow: hidden;
 
   img {
     width: 100%;
@@ -162,5 +163,6 @@ li {
   font-weight: var(--fw-extrabold);
   color: #f2c72a;
   text-shadow:4px 2px 6px var(--accent);
-  font-family: var(--font-family);
+  font-family: var(--font-family), sans-serif;
+  font-size: var(--fs-h2);
 }
