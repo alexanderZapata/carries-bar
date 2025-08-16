@@ -97,11 +97,11 @@
   flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
-  gap: .25rem;
+  gap: 1rem;
 
   img {
     display: flex;
-    max-width: 35px;
+    max-height: 45px;
   }
 }
 
