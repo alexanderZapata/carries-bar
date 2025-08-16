@@ -14,15 +14,10 @@
 }
 
 .pill {
-  display: inline-flex;
-  align-items: center;
   background: var(--chip);
   border: 1px solid color-mix(var(--chip) 65%, white 35%);
   border-radius: 999px;
   padding: 8px 12px;
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-sp);
-  color: var(--accent);
 }
 
 .pill.active {
