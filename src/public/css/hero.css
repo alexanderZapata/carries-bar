@@ -4,7 +4,7 @@
   grid-template-rows: auto;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
-  padding: calc(var(--padding) * 2);
+  padding: calc(var(--padding) * 1.5);
   overflow-x: hidden;
   color: var(--ink);
 }
