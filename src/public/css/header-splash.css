@@ -1,6 +1,5 @@
 .splash-container {
   grid-column: 1/13;
-  grid-row: 1;
   height: clamp(5vh, max(16vh, 25vw), 47vh);
   position: relative;
   display: flex;

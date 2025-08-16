@@ -39,7 +39,7 @@
   /* UI tokens used by theme-common */
   --radius: 1rem;
   --shadow: 0 .6rem 1.35rem rgba(0, 0, 0, .7);
-  --padding: 1rem;
+  --padding: .25rem;
 }
 
 *,
