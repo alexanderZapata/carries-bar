@@ -1,25 +1,3 @@
-.carousel {
-  display: flex;
-  background: var(--day-card);
-  flex-direction: row;
-  gap: 2rem;
-  grid-template-columns: 9fr 3fr;
-  color: black;
-  justify-content: space-between;
-  padding: var(--padding);
-  background: var(--day-card);
-  border-radius: var(--radius);
-}
-
-@media screen and (min-width: 765px) {
-  .carousel {
-    display: grid;
-    /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
-    gap: .5rem;
-
-  }
-}
-
 .hero-container {
   position: relative;
   display: grid;
@@ -31,11 +9,52 @@
 }
 
 .panel.carousel-panel {
-  background: red;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
+
+.carousel {
+  display: flex;
+  background: var(--day-card);
+  flex-direction: column;
+  gap: 2rem;
+  grid-template-columns: 9fr 3fr;
+  color: black;
+  justify-content: space-between;
+  padding: var(--padding);
+  background: var(--day-card);
+  border-radius: var(--radius);
+}
+
+.tonight-at-carries-badge-list {
+  gap: .25rem;
+  align-items: center;
+}
+
+.tonight-at-carries-badge-list .badge {
+  padding: .5rem;
+  border-radius: 5rem;
+}
+
+.tonight-at-carries-badge {
+  text-align: center;
+  font-size: var(--fs-sp);
+  font-weight: var(--fw-medium);
+}
+
+/*@media screen and (min-width: 765px) {*/
+/*  .carousel {*/
+/*    display: grid;*/
+/*    !*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*!*/
+/*    gap: .5rem;*/
+
+/*  }*/
+/*}*/
+
+
+
+
 
 /*.carousel {*/
 /*  display: grid;*/
@@ -54,6 +73,14 @@
 
 .carousel-selector-container {
   order: 2;
+}
+
+.eyebrow {
+  letter-spacing: .12em;
+  font-size: var(--fs-p);
+  color: var(--muted);
+  opacity: .9;
+  margin-bottom: 8px
 }
 
 
@@ -195,37 +222,41 @@
   border: 0;
 }
 
-@media screen and (min-width: 915px) {
-  .hero-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    background: blue;
-  }
+/*@media screen and (min-width: 915px) {*/
+/*  .hero-container {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(12, 1fr);*/
+/*    background: blue;*/
+/*  }*/
 
-  .hero-container .hero-carousel {
-    grid-column: 1 / 8;
-    display: flex;
-    background: purple;
-  }
+/*  .hero-container .hero-carousel {*/
+/*    grid-column: 1 / 8;*/
+/*    display: flex;*/
+/*    background: purple;*/
+/*  }*/
 
-  .hero-container .queue-panel {
-    grid-column: 8 / 13;
-    position: relative;
-    width: unset;
-    bottom: unset;
-    right: unset;
-    transform: translate(0, 0);
-  }
+/*  .hero-container .queue-panel {*/
+/*    grid-column: 8 / 13;*/
+/*    position: relative;*/
+/*    width: unset;*/
+/*    bottom: unset;*/
+/*    right: unset;*/
+/*    transform: translate(0, 0);*/
+/*  }*/
 
-  .queue-panel:has(.queue-radio:checked:not(#q-none)) {
-    transform: translate(0, 0);
-  }
+/*  .queue-panel:has(.queue-radio:checked:not(#q-none)) {*/
+/*    transform: translate(0, 0);*/
+/*  }*/
 
-  .hero-container h1 {
-    font-size: var(--fs-p);
-    text-align: center;
-  }
-}
+/*  .hero-container h1 {*/
+/*    font-size: var(--fs-p);*/
+/*    text-align: center;*/
+/*  }*/
+/*}*/
+
+
+
+/*BLLLLLAAARRRGGG*/
 
 /*.hero {*/
 /*  display: grid;*/

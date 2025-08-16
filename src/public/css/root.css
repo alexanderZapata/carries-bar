@@ -130,3 +130,11 @@ p {
   font-weight: bold;
 }
 
+ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
