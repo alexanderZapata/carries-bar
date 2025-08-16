@@ -21,14 +21,17 @@
   --flow-spacing: 1.25rem;
 
   /* Dynamic Font Sizes */
-  --fs-sp: clamp(0.5625rem, 0.375rem + 1.125vw, 0.75rem);
-  --fs-p: clamp(0.75rem, 0.5625rem + 0.9375vw, 0.84375rem);
-  --fs-h6: clamp(0.84375rem, 0.65625rem + 0.9375vw, 0.9375rem);
-  --fs-h5: clamp(0.9375rem, 0.75rem + 1.125vw, 1.125rem);
-  --fs-h4: clamp(1.125rem, 0.84375rem + 1.3125vw, 1.3125rem);
-  --fs-h3: clamp(1.40625rem, 1.03125rem + 1.5vw, 1.6875rem);
-  --fs-h2: clamp(1.734375rem, 1.3125rem + 1.875vw, 2.0625rem);
-  --fs-h1: clamp(2.15625rem, 1.59375rem + 2.25vw, 2.625rem);
+  /* Dynamic Font Sizes (-16% | ×0.84) */
+  --fs-sp: clamp(0.63rem, 0.42rem + 1.26vw, 0.84rem);
+  --fs-p: clamp(0.84rem, 0.63rem + 1.05vw, 0.945rem);
+
+  --fs-h6: clamp(0.945rem, 0.735rem + 1.05vw, 1.05rem);
+  --fs-h5: clamp(1.05rem, 0.84rem + 1.26vw, 1.26rem);
+  --fs-h4: clamp(1.26rem, 0.945rem + 1.47vw, 1.47rem);
+  --fs-h3: clamp(1.575rem, 1.155rem + 1.68vw, 1.89rem);
+  --fs-h2: clamp(1.9425rem, 1.47rem + 2.1vw, 2.31rem);
+  --fs-h1: clamp(2.415rem, 1.785rem + 2.52vw, 2.94rem);
+
 
 
 
