@@ -32,12 +32,6 @@
   --fs-h2: clamp(1.9425rem, 1.47rem + 2.1vw, 2.31rem);
   --fs-h1: clamp(2.415rem, 1.785rem + 2.52vw, 2.94rem);
 
-
-
-
-
-
-
   --navigation-height: 8rem;
   --mobile-version-size: 860px;
   --minimum-width-size: 320px;
@@ -71,7 +65,7 @@ body {
   /*overflow-x: hidden;*/
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto;
   font-family: var(--font-family), sans-serif;
   font-weight: var(--fw-regular);
   line-height: 1.6;

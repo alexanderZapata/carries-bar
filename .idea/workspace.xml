@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/src/public/css/header-splash.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/header-splash.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/hero.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/css/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/root.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,7 @@
       <updated>1754967835269</updated>
       <workItem from="1754967837343" duration="9139000" />
       <workItem from="1754992974604" duration="34509000" />
-      <workItem from="1755366075851" duration="5188000" />
+      <workItem from="1755366075851" duration="5616000" />
     </task>
     <servers />
   </component>
