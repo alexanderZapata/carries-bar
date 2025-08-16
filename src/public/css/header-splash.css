@@ -7,7 +7,7 @@
   align-items: center;
   width: 100vw;
   height: auto;
-  max-height: 30dvh;
+  max-height: 40vh;
   background: var(--day-card);
   overflow: hidden;
 
