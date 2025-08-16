@@ -1,0 +1,24 @@
+
+.tonight-at-carries-badge-list {
+  gap: .25rem;
+  align-items: center;
+}
+
+.tonight-at-carries-badge-list .badge {
+  padding: .5rem;
+  border-radius: 5rem;
+}
+
+.tonight-at-carries-badge {
+  text-align: center;
+  font-size: var(--fs-sp);
+  font-weight: var(--fw-medium);
+}
+
+
+.eyebrow {
+  letter-spacing: .12em;
+  font-size: var(--fs-p);
+  color: var(--muted);
+  opacity: .9;
+}
